@@ -1,0 +1,16 @@
+PODS:
+  - CSLCommonLibrary (0.0.1)
+
+DEPENDENCIES:
+  - CSLCommonLibrary (from `../`)
+
+EXTERNAL SOURCES:
+  CSLCommonLibrary:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CSLCommonLibrary: 8061f6eb16cf1f3657541f18a3cf10141b0a282c
+
+PODFILE CHECKSUM: 554bf08e9a4584812b1a068b8739e51ebdf9ffb5
+
+COCOAPODS: 1.5.3
