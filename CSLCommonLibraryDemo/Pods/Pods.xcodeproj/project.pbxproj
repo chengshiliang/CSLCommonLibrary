@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		15FF128E2362F6D200F24576 /* NSInvocation+Base.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FF128C2362F6D100F24576 /* NSInvocation+Base.h */; };
 		15FF128F2362F6D200F24576 /* NSInvocation+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF128D2362F6D200F24576 /* NSInvocation+Base.m */; };
+		15FF12922362F85200F24576 /* NSObject+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF12912362F85200F24576 /* NSObject+Base.m */; };
 		1920A377E0914642F1A07C8F4716FCA9 /* NSNotificationCenter+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4D1F42B6F0DAC6321FE5E85D2648AD /* NSNotificationCenter+Base.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		21E775D5512E347060ED202E5310C061 /* KVOProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CC040B17C03126ED1B80BF405E65565 /* KVOProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		302FE5C7B6C66AC4FCB36555421FFC5D /* CSLDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6124F2E32FD6664924CC347F21A855 /* CSLDelegateProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		37DB49D135721565B32AC31BB94C18C7 /* CSLCommonLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 810A98B38D4A5F33C271FA972943C7BB /* CSLCommonLibrary-dummy.m */; };
 		38979D28D655BCC648661BEE488A3A9E /* CSLBaseObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D78C089ABDAF66D6334CB9F5C41C19D /* CSLBaseObject.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3DE69F11D54D60644642FF97987EB6D0 /* KVOProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B703BFD425A7BD693017EF59111925 /* KVOProxy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		41CD925C00F8BC0CD72AC7AF1D9EE01E /* NSObject+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BBA506D7BFDB564435CB23C02818338 /* NSObject+Base.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4CDE265B7741E746F86B9068BD054187 /* NSNotificationCenter+Base.h in Headers */ = {isa = PBXBuildFile; fileRef = 33A32D0854CC9FD7A1CDD32110009992 /* NSNotificationCenter+Base.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		593CDC4E2972515A380BC587B8D97FE6 /* BaseObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = F295E165BB138ADC0FEF956C083AA2C7 /* BaseObserver.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		697670AF1431F7ADA52883BDD95E7714 /* CSLBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 276A43B2BF9D15F34A7F28C1EAE9CCDC /* CSLBaseObject.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -38,6 +38,7 @@
 /* Begin PBXFileReference section */
 		15FF128C2362F6D100F24576 /* NSInvocation+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+Base.h"; path = "CSLCommonLibrary/NSInvocation+Base.h"; sourceTree = "<group>"; };
 		15FF128D2362F6D200F24576 /* NSInvocation+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+Base.m"; path = "CSLCommonLibrary/NSInvocation+Base.m"; sourceTree = "<group>"; };
+		15FF12912362F85200F24576 /* NSObject+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Base.m"; path = "CSLCommonLibrary/NSObject+Base.m"; sourceTree = "<group>"; };
 		1C9FFD5CAD40882AB26B3164B29D4ABE /* CSLCommonLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CSLCommonLibrary-prefix.pch"; sourceTree = "<group>"; };
 		276A43B2BF9D15F34A7F28C1EAE9CCDC /* CSLBaseObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSLBaseObject.m; path = CSLCommonLibrary/CSLBaseObject.m; sourceTree = "<group>"; };
 		2D78C089ABDAF66D6334CB9F5C41C19D /* CSLBaseObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSLBaseObject.h; path = CSLCommonLibrary/CSLBaseObject.h; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		402F21466090BD40E1C57F7170EF26BD /* Pods-CSLCommonLibraryDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CSLCommonLibraryDemo-dummy.m"; sourceTree = "<group>"; };
 		580A062DD64E65A58E4CB9F709806D79 /* CSLDelegateProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSLDelegateProxy.m; path = CSLCommonLibrary/CSLDelegateProxy.m; sourceTree = "<group>"; };
 		70EDC7F73955F09FDB4F2771F85BEA23 /* Pods-CSLCommonLibraryDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CSLCommonLibraryDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		7BBA506D7BFDB564435CB23C02818338 /* NSObject+Base.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Base.m"; sourceTree = "<group>"; };
 		7CC040B17C03126ED1B80BF405E65565 /* KVOProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KVOProxy.h; path = CSLCommonLibrary/KVOProxy.h; sourceTree = "<group>"; };
 		810A98B38D4A5F33C271FA972943C7BB /* CSLCommonLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CSLCommonLibrary-dummy.m"; sourceTree = "<group>"; };
 		9381459535A784CC11F5AEEF5DBE0750 /* NSObject+Base.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+Base.h"; path = "CSLCommonLibrary/NSObject+Base.h"; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 				33A32D0854CC9FD7A1CDD32110009992 /* NSNotificationCenter+Base.h */,
 				AD4D1F42B6F0DAC6321FE5E85D2648AD /* NSNotificationCenter+Base.m */,
 				9381459535A784CC11F5AEEF5DBE0750 /* NSObject+Base.h */,
-				7BBA506D7BFDB564435CB23C02818338 /* NSObject+Base.m */,
+				15FF12912362F85200F24576 /* NSObject+Base.m */,
 				414401606A5413D5302B6938636955E3 /* Pod */,
 				ED1788C8CC84C5D159B70E75CD33F32F /* Support Files */,
 			);
@@ -287,13 +287,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15FF12922362F85200F24576 /* NSObject+Base.m in Sources */,
 				593CDC4E2972515A380BC587B8D97FE6 /* BaseObserver.m in Sources */,
 				697670AF1431F7ADA52883BDD95E7714 /* CSLBaseObject.m in Sources */,
 				37DB49D135721565B32AC31BB94C18C7 /* CSLCommonLibrary-dummy.m in Sources */,
 				7C14F3758B96FB689561269C47BB51F8 /* CSLDelegateProxy.m in Sources */,
 				3DE69F11D54D60644642FF97987EB6D0 /* KVOProxy.m in Sources */,
 				1920A377E0914642F1A07C8F4716FCA9 /* NSNotificationCenter+Base.m in Sources */,
-				41CD925C00F8BC0CD72AC7AF1D9EE01E /* NSObject+Base.m in Sources */,
 				15FF128F2362F6D200F24576 /* NSInvocation+Base.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
