@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIWebView *webview;
 @property (nonatomic, strong) TestModel *model;
 @property (nonatomic, strong) BaseObserver *observer;
+@property (nonatomic, strong) CSLDelegateProxy *delegateProxy;
 @end
 
 @implementation ViewController
@@ -34,12 +35,18 @@
 
 - (IBAction)goNext:(id)sender {
     SecondViewController *vc = [[SecondViewController alloc]init];
-    vc.delegate = (id<SecondViewControllerDelegate>)[[CSLDelegateProxy alloc]initWithDelegateProxy:self];
+    vc.delegate = (id<SecondViewControllerDelegate>)self.delegateProxy;
     [self presentViewController:vc animated:YES completion:nil];
 }
 
-- (void)doSomething {
-    NSLog(@"delegate callback");
+- (CSLDelegateProxy *)delegateProxy {
+    if (!_delegateProxy) {
+        _delegateProxy = [[CSLDelegateProxy alloc]initWithDelegateProxy:@protocol(SecondViewControllerDelegate)];
+        [_delegateProxy addSelector:@selector(doSomething) callback:^(id params) {
+            NSLog(@"delegate callback");
+        }];
+    }
+    return _delegateProxy;
 }
 
 - (void)viewDidLoad {

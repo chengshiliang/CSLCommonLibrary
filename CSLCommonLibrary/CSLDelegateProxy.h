@@ -9,9 +9,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CSLDelegateProxy : NSProxy
-
-- (instancetype)initWithDelegateProxy:(id)protocol;
+@interface CSLDelegateProxy : NSObject
+@property (nonatomic, weak) id delegate;
+- (instancetype)initWithDelegateProxy:(Protocol *)protocol;
+- (void)addSelector:(SEL)selector callback:(void(^)(id))callback;
 @end
 
 NS_ASSUME_NONNULL_END

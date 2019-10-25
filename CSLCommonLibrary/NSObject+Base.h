@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (Base)
 - (void)swizzDeallocMethod:(NSObject *)target callback:(void(^)(__unsafe_unretained NSObject *deallocObj))callback;
+- (void)addSelector:(SEL)selector fromProtocol:(id)protocol callback:(void(^)(id))callback;
 @end
 
 NS_ASSUME_NONNULL_END
