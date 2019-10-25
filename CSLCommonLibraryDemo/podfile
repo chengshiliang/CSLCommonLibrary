@@ -1,8 +1,6 @@
-#source 'https://github.com/chengshiliang/CSLCommonLibrary.git'
 source 'https://github.com/Cocoapods/Specs.git'
 platform :ios, '8.0'
 target 'CSLCommonLibraryDemo' do
 pod 'CSLCommonLibrary', :path => '../'
-pod 'ReactiveObjC', '~> 3.1.1'
 end
 inhibit_all_warnings!
