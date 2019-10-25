@@ -14,6 +14,8 @@
 		154882E9236004C70035FCDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 154882E7236004C70035FCDF /* LaunchScreen.storyboard */; };
 		154882EC236004C70035FCDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 154882EB236004C70035FCDF /* main.m */; };
 		154882F42360071F0035FCDF /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 154882F32360071F0035FCDF /* TestModel.m */; };
+		15488328236056FC0035FCDF /* src in Resources */ = {isa = PBXBuildFile; fileRef = 15488327236056FC0035FCDF /* src */; };
+		15FF12652361AA1A00F24576 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF12642361AA1A00F24576 /* SecondViewController.m */; };
 		332E68123B70E77466635C10 /* libPods-CSLCommonLibraryDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8CF6568E0E4803D209E427A /* libPods-CSLCommonLibraryDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,9 @@
 		154882EB236004C70035FCDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		154882F22360071F0035FCDF /* TestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
 		154882F32360071F0035FCDF /* TestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
+		15488327236056FC0035FCDF /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = "<group>"; };
+		15FF12632361AA1A00F24576 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		15FF12642361AA1A00F24576 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		22326AB81E9E9A9994AA29F5 /* Pods-CSLCommonLibraryDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSLCommonLibraryDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CSLCommonLibraryDemo/Pods-CSLCommonLibraryDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		A37C503A3B935C75C3D90CD0 /* Pods-CSLCommonLibraryDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSLCommonLibraryDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CSLCommonLibraryDemo/Pods-CSLCommonLibraryDemo.release.xcconfig"; sourceTree = "<group>"; };
 		F8CF6568E0E4803D209E427A /* libPods-CSLCommonLibraryDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CSLCommonLibraryDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,8 +77,11 @@
 				154882DD236004C50035FCDF /* AppDelegate.m */,
 				154882DF236004C50035FCDF /* ViewController.h */,
 				154882E0236004C50035FCDF /* ViewController.m */,
+				15FF12632361AA1A00F24576 /* SecondViewController.h */,
+				15FF12642361AA1A00F24576 /* SecondViewController.m */,
 				154882F22360071F0035FCDF /* TestModel.h */,
 				154882F32360071F0035FCDF /* TestModel.m */,
+				15488327236056FC0035FCDF /* src */,
 				154882E2236004C50035FCDF /* Main.storyboard */,
 				154882E5236004C70035FCDF /* Assets.xcassets */,
 				154882E7236004C70035FCDF /* LaunchScreen.storyboard */,
@@ -161,6 +169,7 @@
 				154882E9236004C70035FCDF /* LaunchScreen.storyboard in Resources */,
 				154882E6236004C70035FCDF /* Assets.xcassets in Resources */,
 				154882E4236004C50035FCDF /* Main.storyboard in Resources */,
+				15488328236056FC0035FCDF /* src in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15FF12652361AA1A00F24576 /* SecondViewController.m in Sources */,
 				154882E1236004C50035FCDF /* ViewController.m in Sources */,
 				154882EC236004C70035FCDF /* main.m in Sources */,
 				154882DE236004C50035FCDF /* AppDelegate.m in Sources */,

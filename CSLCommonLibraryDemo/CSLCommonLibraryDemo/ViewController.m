@@ -7,10 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "SecondViewController.h"
 
 #import "NSNotificationCenter+Base.h"
-
 #import "BaseObserver.h"
+#import "CSLBaseObject.h"
+#import "CSLDelegateProxy.h"
 
 #import "TestModel.h"
 
@@ -18,11 +20,27 @@
 {
     int count;
 }
+@property (weak, nonatomic) IBOutlet UIWebView *webview;
 @property (nonatomic, strong) TestModel *model;
 @property (nonatomic, strong) BaseObserver *observer;
 @end
 
 @implementation ViewController
+- (IBAction)back:(id)sender {
+    if ([self.webview canGoBack]) {
+        [self.webview goBack];
+    }
+}
+
+- (IBAction)goNext:(id)sender {
+    SecondViewController *vc = [[SecondViewController alloc]init];
+    vc.delegate = (id<SecondViewControllerDelegate>)[[CSLDelegateProxy alloc]initWithDelegateProxy:self];
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (void)doSomething {
+    NSLog(@"delegate callback");
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,16 +53,22 @@
         NSLog(@"notify----data%@", data);
     }];
     
-    [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(printNum:) userInfo:nil repeats:true];
-}
-- (void)printNum:(NSNumber *)number {
-    count ++;
-    self.model.str = [NSString stringWithFormat:@"xxx%d",count];
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"123" object:nil userInfo:@{@"123": @"456"}];
+    NSString * path = [[NSBundle mainBundle] pathForResource:@"src/index" ofType:@"html"];
+    NSURL * url = [NSURL fileURLWithPath:path];
+    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url];
+    [self.webview loadRequest:request];
     
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"123" object:nil];
+    id(^block)(id obj) = ^id(id obj) {
+        NSLog(@"block excute");
+        return obj;
+    };
+    id obj = [CSLBaseObject invokeArguments:@[@"test"] withBlock:block];
+    NSLog(@"call func result---%@",obj);
+    
+    
 }
+
 - (void)dealloc {
-    NSLog(@"firstVC dealloc");
+    NSLog(@"vc dealloc");
 }
 @end
