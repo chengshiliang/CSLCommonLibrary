@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol SecondViewControllerDelegate <NSObject>
 
-- (void)doSomething;
+- (void)doSomething:(BOOL)result :(NSString *)str;
 
 @end
 

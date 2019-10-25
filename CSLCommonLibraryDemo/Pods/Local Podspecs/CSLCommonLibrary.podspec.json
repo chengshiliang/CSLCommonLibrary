@@ -1,6 +1,6 @@
 {
   "name": "CSLCommonLibrary",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "summary": "supply basic function,package basic library,like kvo,notify.",
   "homepage": "https://github.com/chengshiliang/CSLCommonLibrary",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/chengshiliang/CSLCommonLibrary.git",
-    "tag": "0.0.3"
+    "tag": "0.0.6"
   },
   "platforms": {
     "ios": "8.0"

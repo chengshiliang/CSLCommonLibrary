@@ -42,8 +42,8 @@
 - (CSLDelegateProxy *)delegateProxy {
     if (!_delegateProxy) {
         _delegateProxy = [[CSLDelegateProxy alloc]initWithDelegateProxy:@protocol(SecondViewControllerDelegate)];
-        [_delegateProxy addSelector:@selector(doSomething) callback:^(id params) {
-            NSLog(@"delegate callback");
+        [_delegateProxy addSelector:@selector(doSomething::) callback:^(id params) {
+            NSLog(@"delegate callback%@",params);
         }];
     }
     return _delegateProxy;

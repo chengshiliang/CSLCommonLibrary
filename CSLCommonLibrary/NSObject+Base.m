@@ -211,7 +211,7 @@ static void NSObjectForSelector(NSObject *target, SEL selector, Protocol *protoc
     @synchronized (target) {
         Class class = SwizzleClass(target);
         objc_setAssociatedObject(target, aliasSelector, callback, OBJC_ASSOCIATION_RETAIN);
-        Method targetMethod = class_getInstanceMethod(target.class, selector);
+        Method targetMethod = class_getInstanceMethod(class, selector);
         if (targetMethod == NULL) {
             const char *typeEncoding;
             if (protocol == NULL) {

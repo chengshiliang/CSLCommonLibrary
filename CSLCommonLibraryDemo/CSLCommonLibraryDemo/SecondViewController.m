@@ -25,8 +25,8 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    if (self.delegate && [self.delegate respondsToSelector:@selector(doSomething)]) {
-        [self.delegate doSomething];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(doSomething::)]) {
+        [self.delegate doSomething:true :@"hello"];
     }
 }
 
