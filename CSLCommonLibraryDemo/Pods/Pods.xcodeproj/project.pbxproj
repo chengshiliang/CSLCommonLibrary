@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15FF128E2362F6D200F24576 /* NSInvocation+Base.h in Headers */ = {isa = PBXBuildFile; fileRef = 15FF128C2362F6D100F24576 /* NSInvocation+Base.h */; };
+		15FF128F2362F6D200F24576 /* NSInvocation+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FF128D2362F6D200F24576 /* NSInvocation+Base.m */; };
 		1920A377E0914642F1A07C8F4716FCA9 /* NSNotificationCenter+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = AD4D1F42B6F0DAC6321FE5E85D2648AD /* NSNotificationCenter+Base.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		21E775D5512E347060ED202E5310C061 /* KVOProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CC040B17C03126ED1B80BF405E65565 /* KVOProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		302FE5C7B6C66AC4FCB36555421FFC5D /* CSLDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6124F2E32FD6664924CC347F21A855 /* CSLDelegateProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15FF128C2362F6D100F24576 /* NSInvocation+Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+Base.h"; path = "CSLCommonLibrary/NSInvocation+Base.h"; sourceTree = "<group>"; };
+		15FF128D2362F6D200F24576 /* NSInvocation+Base.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+Base.m"; path = "CSLCommonLibrary/NSInvocation+Base.m"; sourceTree = "<group>"; };
 		1C9FFD5CAD40882AB26B3164B29D4ABE /* CSLCommonLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CSLCommonLibrary-prefix.pch"; sourceTree = "<group>"; };
 		276A43B2BF9D15F34A7F28C1EAE9CCDC /* CSLBaseObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSLBaseObject.m; path = CSLCommonLibrary/CSLBaseObject.m; sourceTree = "<group>"; };
 		2D78C089ABDAF66D6334CB9F5C41C19D /* CSLBaseObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSLBaseObject.h; path = CSLCommonLibrary/CSLBaseObject.h; sourceTree = "<group>"; };
@@ -48,16 +52,16 @@
 		810A98B38D4A5F33C271FA972943C7BB /* CSLCommonLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CSLCommonLibrary-dummy.m"; sourceTree = "<group>"; };
 		9381459535A784CC11F5AEEF5DBE0750 /* NSObject+Base.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+Base.h"; path = "CSLCommonLibrary/NSObject+Base.h"; sourceTree = "<group>"; };
 		94B703BFD425A7BD693017EF59111925 /* KVOProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KVOProxy.m; path = CSLCommonLibrary/KVOProxy.m; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A47F57A19F07262CEAB0F69402FC961F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A47F57A19F07262CEAB0F69402FC961F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		AD4D1F42B6F0DAC6321FE5E85D2648AD /* NSNotificationCenter+Base.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+Base.m"; path = "CSLCommonLibrary/NSNotificationCenter+Base.m"; sourceTree = "<group>"; };
-		AECB58341AB4455CCA8223F90D6A56C1 /* CSLCommonLibrary.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CSLCommonLibrary.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AECB58341AB4455CCA8223F90D6A56C1 /* CSLCommonLibrary.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = CSLCommonLibrary.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B74B910B57D3BEC258B8DAE0D01EA986 /* Pods-CSLCommonLibraryDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CSLCommonLibraryDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		C386D2A70A3251F95C9467ACB0500B5C /* libCSLCommonLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCSLCommonLibrary.a; path = libCSLCommonLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBDF25D51499A2FF2991EC293EB18A88 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		C386D2A70A3251F95C9467ACB0500B5C /* libCSLCommonLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCSLCommonLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBDF25D51499A2FF2991EC293EB18A88 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D96DE77475F3EAA145378F2A58944103 /* CSLCommonLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CSLCommonLibrary.xcconfig; sourceTree = "<group>"; };
 		DD6124F2E32FD6664924CC347F21A855 /* CSLDelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSLDelegateProxy.h; path = CSLCommonLibrary/CSLDelegateProxy.h; sourceTree = "<group>"; };
-		EF2F7BF956D98118535DD82B4E2F2800 /* libPods-CSLCommonLibraryDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-CSLCommonLibraryDemo.a"; path = "libPods-CSLCommonLibraryDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF2F7BF956D98118535DD82B4E2F2800 /* libPods-CSLCommonLibraryDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CSLCommonLibraryDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F295E165BB138ADC0FEF956C083AA2C7 /* BaseObserver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BaseObserver.m; path = CSLCommonLibrary/BaseObserver.m; sourceTree = "<group>"; };
 		F67F93DDF5ED0529B766D1B066FA566F /* Pods-CSLCommonLibraryDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CSLCommonLibraryDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +87,8 @@
 		135315898EE4D3F2551CB35A67CF873A /* CSLCommonLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				15FF128C2362F6D100F24576 /* NSInvocation+Base.h */,
+				15FF128D2362F6D200F24576 /* NSInvocation+Base.m */,
 				3B3DB6910015974F1674ECC883B02532 /* BaseObserver.h */,
 				F295E165BB138ADC0FEF956C083AA2C7 /* BaseObserver.m */,
 				2D78C089ABDAF66D6334CB9F5C41C19D /* CSLBaseObject.h */,
@@ -199,6 +205,7 @@
 				21E775D5512E347060ED202E5310C061 /* KVOProxy.h in Headers */,
 				4CDE265B7741E746F86B9068BD054187 /* NSNotificationCenter+Base.h in Headers */,
 				AAF8FE38BFA8ADD3C2AC5F3197C54F7D /* NSObject+Base.h in Headers */,
+				15FF128E2362F6D200F24576 /* NSInvocation+Base.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +294,7 @@
 				3DE69F11D54D60644642FF97987EB6D0 /* KVOProxy.m in Sources */,
 				1920A377E0914642F1A07C8F4716FCA9 /* NSNotificationCenter+Base.m in Sources */,
 				41CD925C00F8BC0CD72AC7AF1D9EE01E /* NSObject+Base.m in Sources */,
+				15FF128F2362F6D200F24576 /* NSInvocation+Base.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
