@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'CSLCommonLibrary'
-  s.version      = '0.0.1'
+  s.version      = '0.0.2'
   s.summary      = 'supply basic function,package basic library,like kvo,notify.'
   s.homepage     = 'https://github.com/chengshiliang/CSLCommonLibrary'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
