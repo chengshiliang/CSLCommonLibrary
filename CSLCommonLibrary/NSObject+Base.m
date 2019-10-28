@@ -205,7 +205,7 @@ static const char *SignatureForUndefinedSelector(SEL selector) {
     return signature.UTF8String;
 }
 
-static void NSObjectForSelector(NSObject *target, SEL selector, Protocol *protocol, void(^callback)(id)) {
+static void NSObjectForSelector(NSObject *target, SEL selector, Protocol *protocol, _Nullable id(^callback)(id)) {
     SEL aliasSelector = AliasForSelector(selector);
     
     @synchronized (target) {
@@ -279,6 +279,11 @@ static void NSObjectForSelector(NSObject *target, SEL selector, Protocol *protoc
 }
 
 - (void)addSelector:(SEL)selector fromProtocol:(id)protocol callback:(void(^)(id))callback{
+    _Nullable id(^newBlock)(id)  = (_Nullable id(^)(id))callback;
+    NSObjectForSelector(self, selector, protocol, newBlock);
+}
+
+- (void)addSelector:(SEL)selector fromProtocol:(id)protocol numberCallback:(NSNumber *(^)(id))callback{
     NSObjectForSelector(self, selector, protocol, callback);
 }
 @end

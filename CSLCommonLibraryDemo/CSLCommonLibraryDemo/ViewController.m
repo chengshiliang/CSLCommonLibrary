@@ -13,6 +13,7 @@
 #import "BaseObserver.h"
 #import "CSLBaseObject.h"
 #import "CSLDelegateProxy.h"
+#import "UIAlertView+DelegateProxy.h"
 
 #import "TestModel.h"
 
@@ -34,9 +35,20 @@
 }
 
 - (IBAction)goNext:(id)sender {
-    SecondViewController *vc = [[SecondViewController alloc]init];
-    vc.delegate = (id<SecondViewControllerDelegate>)self.delegateProxy;
-    [self presentViewController:vc animated:YES completion:nil];
+    UIAlertView *actionSheet = [[UIAlertView alloc]initWithTitle:@"actionSheet" message:@"message" delegate:nil cancelButtonTitle:@"cancel" otherButtonTitles:@"ok", nil];
+    [actionSheet buttonClicked:^(UIAlertView *actionSheet,int clickIndex) {
+        if (clickIndex == 1) {
+            SecondViewController *vc = [[SecondViewController alloc]init];
+            vc.delegate = (id<SecondViewControllerDelegate>)self.delegateProxy;
+            [self presentViewController:vc animated:YES completion:nil];
+        }
+    }];
+    
+    [actionSheet enableFirstOtherButton:^BOOL(UIAlertView * _Nonnull actionView) {
+        return true;
+    }];
+    
+    [actionSheet show];
 }
 
 - (CSLDelegateProxy *)delegateProxy {
