@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) id delegate;
 - (instancetype)initWithDelegateProxy:(Protocol *)protocol;
 - (void)addSelector:(SEL)selector callback:(void(^)(id))callback;
-- (void)addSelector:(SEL)selector numberCallback:(NSNumber *(^)(id))callback;
 @end
 
 NS_ASSUME_NONNULL_END

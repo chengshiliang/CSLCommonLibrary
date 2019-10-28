@@ -16,7 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)didPresent:(void(^)(UIAlertView *actionView))didPresentBlock;
 - (void)willDismiss:(void(^)(UIAlertView *actionView, int clickIndex))willDismissBlock;
 - (void)didDismiss:(void(^)(UIAlertView *actionView, int clickIndex))didDismissBlock;
-- (void)enableFirstOtherButton:(BOOL(^)(UIAlertView *actionView))enableFirstOtherButtonBlock;
 @end
 
 NS_ASSUME_NONNULL_END

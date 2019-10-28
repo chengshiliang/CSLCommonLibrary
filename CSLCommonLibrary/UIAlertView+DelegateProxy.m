@@ -52,14 +52,6 @@
             didDismissBlock(params[0],[params[1]intValue]);
         }
     }];
-    
-}
-- (void)enableFirstOtherButton:(BOOL(^)(UIAlertView *actionView))enableFirstOtherButtonBlock{
-    [self.delegateProxy addSelector:@selector(alertViewShouldEnableFirstOtherButton:) numberCallback:^NSNumber * _Nonnull(NSArray *params) {
-        if (enableFirstOtherButtonBlock && params.count == 1) {
-            return [NSNumber numberWithBool:enableFirstOtherButtonBlock(params[0])];
-        }
-    }];
 }
 
 - (CSLDelegateProxy *)delegateProxy {
@@ -70,5 +62,9 @@
         objc_setAssociatedObject(self, _cmd, delegateProxy, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return delegateProxy;
+}
+
+- (void)dealloc {
+    NSLog(@"alert view dealloc");
 }
 @end

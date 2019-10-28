@@ -35,20 +35,18 @@
 }
 
 - (IBAction)goNext:(id)sender {
-    UIAlertView *actionSheet = [[UIAlertView alloc]initWithTitle:@"actionSheet" message:@"message" delegate:nil cancelButtonTitle:@"cancel" otherButtonTitles:@"ok", nil];
-    [actionSheet buttonClicked:^(UIAlertView *actionSheet,int clickIndex) {
+    UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"actionSheet" message:@"message" delegate:nil cancelButtonTitle:@"cancel" otherButtonTitles:@"ok", nil];
+    __weak typeof (self) weakSelf = self;
+    [alertView buttonClicked:^(UIAlertView *alertView,int clickIndex) {
+        __strong typeof (weakSelf) strongSelf = weakSelf;
         if (clickIndex == 1) {
             SecondViewController *vc = [[SecondViewController alloc]init];
-            vc.delegate = (id<SecondViewControllerDelegate>)self.delegateProxy;
-            [self presentViewController:vc animated:YES completion:nil];
+            vc.delegate = (id<SecondViewControllerDelegate>)strongSelf.delegateProxy;
+            [strongSelf presentViewController:vc animated:YES completion:nil];
         }
     }];
     
-    [actionSheet enableFirstOtherButton:^BOOL(UIAlertView * _Nonnull actionView) {
-        return true;
-    }];
-    
-    [actionSheet show];
+    [alertView show];
 }
 
 - (CSLDelegateProxy *)delegateProxy {

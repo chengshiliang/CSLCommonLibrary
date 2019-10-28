@@ -8,6 +8,8 @@
 
 #import "SecondViewController.h"
 
+#import "CSLBaseControl.h"
+
 @interface SecondViewController ()
 
 @end
@@ -16,6 +18,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    __weak typeof (self) weakSelf = self;
+    CSLBaseControl *control = [[CSLBaseControl alloc]initWithTarget:self controlEvent:UIControlEventTouchUpInside block:^(UIControl * _Nonnull control){
+        __strong typeof (weakSelf) strongSelf = weakSelf;
+        [strongSelf dismissViewControllerAnimated:YES completion:nil];
+    }];
+    control.backgroundColor = [UIColor redColor];
+    control.frame = CGRectMake(100, 100, 200, 200);
+    [self.view addSubview:control];
     // Do any additional setup after loading the view.
 }
 

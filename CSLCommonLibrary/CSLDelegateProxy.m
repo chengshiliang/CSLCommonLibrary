@@ -33,10 +33,6 @@
     [self addSelector:selector fromProtocol:self.protocol callback:callback];
 }
 
-- (void)addSelector:(SEL)selector numberCallback:(NSNumber *(^)(id))callback {
-    [self addSelector:selector fromProtocol:self.protocol numberCallback:callback];
-}
-
 - (void)forwardInvocation:(NSInvocation *)invocation {
     [invocation invokeWithTarget:self.delegate];
 }
