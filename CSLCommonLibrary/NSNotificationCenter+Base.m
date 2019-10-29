@@ -46,4 +46,7 @@ static void *kNotification_Observer_Key = "kNotification_Observer_Key";
     return objc_getAssociatedObject(self, &kNotification_Observer_Key);
 }
 
+- (void)dealloc {
+    NSLog(@"notification dealloc");
+}
 @end

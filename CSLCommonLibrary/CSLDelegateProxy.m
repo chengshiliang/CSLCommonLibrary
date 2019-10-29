@@ -54,4 +54,8 @@
     
     return [super respondsToSelector:selector];
 }
+
+- (void)dealloc {
+    NSLog(@"delegate proxy dealloc");
+}
 @end

@@ -53,6 +53,6 @@
 }
 
 - (void)dealloc{
-    NSLog(@"dealloc");
+    NSLog(@"base observer dealloc");
 }
 @end

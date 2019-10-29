@@ -62,4 +62,8 @@
     }
     return delegateProxy;
 }
+
+- (void)dealloc {
+    NSLog(@"action sheet dealloc");
+}
 @end

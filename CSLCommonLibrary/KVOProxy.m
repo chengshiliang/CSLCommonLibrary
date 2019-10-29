@@ -64,4 +64,8 @@
         });
     }
 }
+
+- (void)dealloc {
+    NSLog(@"kvo dealloc");
+}
 @end
