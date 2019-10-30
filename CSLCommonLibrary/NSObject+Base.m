@@ -278,7 +278,7 @@ static void NSObjectForSelector(NSObject *target, SEL selector, Protocol *protoc
     }
 }
 
-- (void)addSelector:(SEL)selector fromProtocol:(id)protocol callback:(void(^)(id))callback{
+- (void)addSelector:(SEL)selector fromProtocol:(_Nullable id)protocol callback:(void(^)(id))callback{
     NSObjectForSelector(self, selector, protocol, callback);
 }
 @end

@@ -7,30 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00CA9B539C27A1D4A67E190EFCB7E0B2 /* UIActionSheet+DelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 44918B598862283BCF1EA38932CFC0B6 /* UIActionSheet+DelegateProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0788FC71F8B203F8E54F0CB7E9D85D89 /* NSObject+Base.h in Headers */ = {isa = PBXBuildFile; fileRef = A459A6BB2C227CA0C0B299DA6C25731D /* NSObject+Base.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		09BA8126A69C99312DD30BDF65175CD7 /* NSObject+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = DD98D0F7BB22AD50A1C01B43BAFD4138 /* NSObject+Base.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		12F2107856FEC93A1C1AD5EC1926AFC1 /* CSLBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDCB5D91BD5A38F43CFD4C68ACB112A /* CSLBaseObject.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		17631D8E6B24BC02849D6F886E2D9A7C /* KVOProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 0242471147B1031638FA00893729E297 /* KVOProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1D0F8051BCD21F3C19C92C0B172CE714 /* UIAlertView+DelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F30FC6F4EDAC23463AFEB5B7F15776CE /* UIAlertView+DelegateProxy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3A66585FFB9CCA5416AC65E081F9B48E /* BaseObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFF50EB4ACF5D9592A468707745CBE2 /* BaseObserver.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7F694E7C63E7EDF0362E0E1B63B7225F /* UIControl+Events.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED243D97B2B06F895E2C2395761EBC0 /* UIControl+Events.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		8E5869AF4CA09B33A05D9C02A5D113A7 /* CSLDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = D63E82B964FEE9485DAFB73B2DFCD8A6 /* CSLDelegateProxy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1019355CA84198936974A025656F12EF /* NSNotificationCenter+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = E0EE6222963D6857FD96C964899B8A08 /* NSNotificationCenter+Base.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		12F9C58CF7269574AB67E6BFCF0C176F /* BaseObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3A98227D417BFB3CBCF061E391EFEC /* BaseObserver.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2848797A43AD56A595BADFEF2BC38484 /* CSLBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 610A4DB188B6AF6873A2DD18F6E4B1A9 /* CSLBaseObject.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2B22D6D9D2D9C5062575A99917AB3F7B /* UIAlertView+DelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 750BC37E66439A7CB49934C7773FDDB0 /* UIAlertView+DelegateProxy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2F86EA98F9391CD4B03ECA456E267868 /* NSObject+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = CF513EBC65DC50831BAE153CF5E2E7E1 /* NSObject+Base.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		415FB0356936EB41F101B04EA2072917 /* BaseObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = C53BC373764194206A70456D1053063D /* BaseObserver.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		45FBE6B67D71C55CCFA4F4F14D55093D /* UIActionSheet+DelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = F87506364D7746B4295F088E63561F14 /* UIActionSheet+DelegateProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		478FC164A3D59419787B52C0AC1FC2D7 /* UIActionSheet+DelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FAE0E786AF79ABD4F1EDE578790E89 /* UIActionSheet+DelegateProxy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4F6BDE0152CBC3477C26EF1F30344094 /* UICollectionReusableView+DelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = D1890FF81C24512EC8713A566E626357 /* UICollectionReusableView+DelegateProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		53DE49306C4D92406ADF98B20FD4DB32 /* NSNotificationCenter+Base.h in Headers */ = {isa = PBXBuildFile; fileRef = BF5A0CE69A6CCAE92534CC25FCB7299E /* NSNotificationCenter+Base.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		65B81D8C2818C2641B544CF677BC642F /* UIControl+Events.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C0142998218AA634D19A67FC7FC1752 /* UIControl+Events.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6A8426869A1A8BE68D10027778E37D1D /* UICollectionReusableView+DelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8C2987D0991F39500D8C987BA885C0 /* UICollectionReusableView+DelegateProxy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6E26F6EA5949ADCB25F5CD6AB68E039A /* NSObject+Base.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E7026E531632B784F2790CC7DD71138 /* NSObject+Base.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7288124D43382F9AA65850CF1C51F575 /* CSLCommonLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C68DB96BA101A7523A8D3F96C3BCD26 /* CSLCommonLibrary-dummy.m */; };
+		76C58B06C108C3B2F714F7D4DE1AD65B /* UIAlertView+DelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 728019558AB18EB4D682216F3C8B44A5 /* UIAlertView+DelegateProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7E364363E17F86CDC5B7FE0BE31A8832 /* UIGestureRecognizer+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = D656C4A32A0233155E5B79105899B297 /* UIGestureRecognizer+Action.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		809DA92D97ACEFCD8A144128789B884E /* UIImagePickerController+DelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = D98202B19D1B73B5FF8A3BE48669F464 /* UIImagePickerController+DelegateProxy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		88E786207CE4660A8676578ECC5DF40B /* UIGestureRecognizer+Action.h in Headers */ = {isa = PBXBuildFile; fileRef = D7F1E660256700B83E1BC601E8EA7429 /* UIGestureRecognizer+Action.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		99A8AA29B15FB0E37C73F2DD91838632 /* Pods-CSLCommonLibraryDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 402F21466090BD40E1C57F7170EF26BD /* Pods-CSLCommonLibraryDemo-dummy.m */; };
-		9A53782CF5B4DC61332F00293D4EF937 /* NSInvocation+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B60041BFA37251C6FD0B7F098EDB04 /* NSInvocation+Base.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		9D8F51A7F9446F2FD58E4A75DEC763CA /* CSLDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A773F07265363E2EF71A35F7A2D01F1 /* CSLDelegateProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A344C0AF64191BFF8AFD700258150545 /* UIAlertView+DelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = C4487B4618B588A3DD8AD5D2160AEC74 /* UIAlertView+DelegateProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B0CAA4EFA80269D266613490EF95BBFC /* UIGestureRecognizer+Action.h in Headers */ = {isa = PBXBuildFile; fileRef = 180039814F351CE8816E2DD42B764583 /* UIGestureRecognizer+Action.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B5F18B5B06269E9AE600A4EE6283A1E8 /* NSInvocation+Base.h in Headers */ = {isa = PBXBuildFile; fileRef = EC772325BF0CED9F05912D46F0C8D7A7 /* NSInvocation+Base.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B903990BA57559B40C792EE618257B0E /* KVOProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B79A6C06BDB9DA6DBAD740A0C321BB5 /* KVOProxy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		BE75F1D3AA8E22C59076677CA8BA0731 /* UIControl+Events.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E85B1AD254A93580B7BD3662F8172E0 /* UIControl+Events.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C59DD1A0A4C87F21972A0D95F5959B54 /* CSLCommonLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F6F4B1DA9F1C389C043402CEA30561 /* CSLCommonLibrary-dummy.m */; };
-		E242ABEDBF3098E3BA46B8C990956A76 /* BaseObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = 94619652D1A24AC6A5ABAF8F439D35D1 /* BaseObserver.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		EAB2EF5D5F3E60748EC02195C7A29DDF /* NSNotificationCenter+Base.h in Headers */ = {isa = PBXBuildFile; fileRef = F06763A1AB991A5D2B3F9243B5357432 /* NSNotificationCenter+Base.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F66BFE74DBB4F3A82253FC93D728871A /* CSLBaseObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A4B00769165BCB6CE661D1DB4B61ECB /* CSLBaseObject.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F77367F0D99E9207AE282E3077735D3F /* NSNotificationCenter+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EA474DB90E2E6645BED76CE1821AD7 /* NSNotificationCenter+Base.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FB0BA8DC333CEB9CE5A2B57A57224DF8 /* UIActionSheet+DelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F221F4B68CBCEDD4B51A2E9063EEC006 /* UIActionSheet+DelegateProxy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		FB8E2BA88B2A95D3BD4F12DCF51714B7 /* UIGestureRecognizer+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F9AD14600460DA58179EE5E907B6F1 /* UIGestureRecognizer+Action.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CFDA06590889AD1B44E754F4968A70D4 /* CSLBaseObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 92F955560515450AF99744E771044746 /* CSLBaseObject.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D17C12E9B852F2C1008FFD8FF98C2545 /* NSInvocation+Base.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDA27B484460D966126F91557E991B7 /* NSInvocation+Base.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D83C6C864304BCE0F183FA10C164E213 /* KVOProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A823F70329E6F006E1D40B2C12302F68 /* KVOProxy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DEB84DD230E8AD4370A2767D9420F6D3 /* KVOProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 41D9CB345AFF632068E2E638D24CB73D /* KVOProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E6A42CB8343835D279513739CA876952 /* NSInvocation+Base.h in Headers */ = {isa = PBXBuildFile; fileRef = D1F089F2AA35FCB69688BFEEBC387A44 /* NSInvocation+Base.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E9656DBE8B5F46D6A3D0B8B112D36AEA /* UIControl+Events.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BE8F6A071DFAF4D2A951239E25D1A1 /* UIControl+Events.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EFAD2CDF9F65778979E60F4FB84D2A91 /* CSLDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9E20CC1DFFDB7562BE9BF47D366C6B /* CSLDelegateProxy.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		F09CBB7C0D4933FFBCB905DB7BB8FCE6 /* UIImagePickerController+DelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 865A0AA53B0DA9BE97143B9A71C9FD16 /* UIImagePickerController+DelegateProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F2A98B9032CA5B98F076DAE658C2A94C /* CSLDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E542CE848159F4731A007944D2F5C91 /* CSLDelegateProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,46 +48,50 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0242471147B1031638FA00893729E297 /* KVOProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KVOProxy.h; path = CSLCommonLibrary/KVOProxy.h; sourceTree = "<group>"; };
-		149C7B058452C5D20CE76588FE3D8B1A /* CSLCommonLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CSLCommonLibrary-prefix.pch"; sourceTree = "<group>"; };
-		16EA474DB90E2E6645BED76CE1821AD7 /* NSNotificationCenter+Base.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+Base.m"; path = "CSLCommonLibrary/NSNotificationCenter+Base.m"; sourceTree = "<group>"; };
-		180039814F351CE8816E2DD42B764583 /* UIGestureRecognizer+Action.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIGestureRecognizer+Action.h"; path = "CSLCommonLibrary/UIGestureRecognizer+Action.h"; sourceTree = "<group>"; };
-		19B60041BFA37251C6FD0B7F098EDB04 /* NSInvocation+Base.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+Base.m"; path = "CSLCommonLibrary/NSInvocation+Base.m"; sourceTree = "<group>"; };
-		2A4B00769165BCB6CE661D1DB4B61ECB /* CSLBaseObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSLBaseObject.h; path = CSLCommonLibrary/CSLBaseObject.h; sourceTree = "<group>"; };
-		2A773F07265363E2EF71A35F7A2D01F1 /* CSLDelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSLDelegateProxy.h; path = CSLCommonLibrary/CSLDelegateProxy.h; sourceTree = "<group>"; };
-		2BFF50EB4ACF5D9592A468707745CBE2 /* BaseObserver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BaseObserver.m; path = CSLCommonLibrary/BaseObserver.m; sourceTree = "<group>"; };
-		3CDCB5D91BD5A38F43CFD4C68ACB112A /* CSLBaseObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSLBaseObject.m; path = CSLCommonLibrary/CSLBaseObject.m; sourceTree = "<group>"; };
+		06FC7B3C3601369B35BF43CF729CD0F0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		0C68DB96BA101A7523A8D3F96C3BCD26 /* CSLCommonLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CSLCommonLibrary-dummy.m"; sourceTree = "<group>"; };
+		18FAE0E786AF79ABD4F1EDE578790E89 /* UIActionSheet+DelegateProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActionSheet+DelegateProxy.m"; path = "CSLCommonLibrary/UIActionSheet+DelegateProxy.m"; sourceTree = "<group>"; };
+		22BE8F6A071DFAF4D2A951239E25D1A1 /* UIControl+Events.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIControl+Events.m"; path = "CSLCommonLibrary/UIControl+Events.m"; sourceTree = "<group>"; };
 		400A982066423DB53DECAF9312549FD2 /* Pods-CSLCommonLibraryDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CSLCommonLibraryDemo.release.xcconfig"; sourceTree = "<group>"; };
 		402F21466090BD40E1C57F7170EF26BD /* Pods-CSLCommonLibraryDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CSLCommonLibraryDemo-dummy.m"; sourceTree = "<group>"; };
-		44918B598862283BCF1EA38932CFC0B6 /* UIActionSheet+DelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActionSheet+DelegateProxy.h"; path = "CSLCommonLibrary/UIActionSheet+DelegateProxy.h"; sourceTree = "<group>"; };
-		4E85B1AD254A93580B7BD3662F8172E0 /* UIControl+Events.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIControl+Events.h"; path = "CSLCommonLibrary/UIControl+Events.h"; sourceTree = "<group>"; };
-		6A7249B461562EA9470EDC8E567337E2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		41D9CB345AFF632068E2E638D24CB73D /* KVOProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KVOProxy.h; path = CSLCommonLibrary/KVOProxy.h; sourceTree = "<group>"; };
+		5433BC92E9843F9D33B4FF2B224639DB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		5F8C2987D0991F39500D8C987BA885C0 /* UICollectionReusableView+DelegateProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UICollectionReusableView+DelegateProxy.m"; path = "CSLCommonLibrary/UICollectionReusableView+DelegateProxy.m"; sourceTree = "<group>"; };
+		5F9E20CC1DFFDB7562BE9BF47D366C6B /* CSLDelegateProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSLDelegateProxy.m; path = CSLCommonLibrary/CSLDelegateProxy.m; sourceTree = "<group>"; };
+		610A4DB188B6AF6873A2DD18F6E4B1A9 /* CSLBaseObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSLBaseObject.m; path = CSLCommonLibrary/CSLBaseObject.m; sourceTree = "<group>"; };
+		66A92DA4E6A0A7F74E0E3B78F3FE3DFD /* CSLCommonLibrary.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CSLCommonLibrary.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6C0142998218AA634D19A67FC7FC1752 /* UIControl+Events.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIControl+Events.h"; path = "CSLCommonLibrary/UIControl+Events.h"; sourceTree = "<group>"; };
 		70EDC7F73955F09FDB4F2771F85BEA23 /* Pods-CSLCommonLibraryDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CSLCommonLibraryDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		7B79A6C06BDB9DA6DBAD740A0C321BB5 /* KVOProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KVOProxy.m; path = CSLCommonLibrary/KVOProxy.m; sourceTree = "<group>"; };
-		92F6F4B1DA9F1C389C043402CEA30561 /* CSLCommonLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CSLCommonLibrary-dummy.m"; sourceTree = "<group>"; };
-		94619652D1A24AC6A5ABAF8F439D35D1 /* BaseObserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BaseObserver.h; path = CSLCommonLibrary/BaseObserver.h; sourceTree = "<group>"; };
-		97F9AD14600460DA58179EE5E907B6F1 /* UIGestureRecognizer+Action.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+Action.m"; path = "CSLCommonLibrary/UIGestureRecognizer+Action.m"; sourceTree = "<group>"; };
-		99DEED9B308473312D3476AC9456ACC3 /* CSLCommonLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CSLCommonLibrary.xcconfig; sourceTree = "<group>"; };
+		728019558AB18EB4D682216F3C8B44A5 /* UIAlertView+DelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+DelegateProxy.h"; path = "CSLCommonLibrary/UIAlertView+DelegateProxy.h"; sourceTree = "<group>"; };
+		750BC37E66439A7CB49934C7773FDDB0 /* UIAlertView+DelegateProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+DelegateProxy.m"; path = "CSLCommonLibrary/UIAlertView+DelegateProxy.m"; sourceTree = "<group>"; };
+		7E542CE848159F4731A007944D2F5C91 /* CSLDelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSLDelegateProxy.h; path = CSLCommonLibrary/CSLDelegateProxy.h; sourceTree = "<group>"; };
+		7E7026E531632B784F2790CC7DD71138 /* NSObject+Base.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+Base.h"; path = "CSLCommonLibrary/NSObject+Base.h"; sourceTree = "<group>"; };
+		865A0AA53B0DA9BE97143B9A71C9FD16 /* UIImagePickerController+DelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImagePickerController+DelegateProxy.h"; path = "CSLCommonLibrary/UIImagePickerController+DelegateProxy.h"; sourceTree = "<group>"; };
+		8EE308E3995FCD7F678D793D0EB555FC /* CSLCommonLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CSLCommonLibrary.xcconfig; sourceTree = "<group>"; };
+		92F955560515450AF99744E771044746 /* CSLBaseObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSLBaseObject.h; path = CSLCommonLibrary/CSLBaseObject.h; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9ED243D97B2B06F895E2C2395761EBC0 /* UIControl+Events.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIControl+Events.m"; path = "CSLCommonLibrary/UIControl+Events.m"; sourceTree = "<group>"; };
-		A459A6BB2C227CA0C0B299DA6C25731D /* NSObject+Base.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+Base.h"; path = "CSLCommonLibrary/NSObject+Base.h"; sourceTree = "<group>"; };
+		A823F70329E6F006E1D40B2C12302F68 /* KVOProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KVOProxy.m; path = CSLCommonLibrary/KVOProxy.m; sourceTree = "<group>"; };
 		B74B910B57D3BEC258B8DAE0D01EA986 /* Pods-CSLCommonLibraryDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CSLCommonLibraryDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		BDDA27B484460D966126F91557E991B7 /* NSInvocation+Base.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+Base.m"; path = "CSLCommonLibrary/NSInvocation+Base.m"; sourceTree = "<group>"; };
+		BF5A0CE69A6CCAE92534CC25FCB7299E /* NSNotificationCenter+Base.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+Base.h"; path = "CSLCommonLibrary/NSNotificationCenter+Base.h"; sourceTree = "<group>"; };
 		C386D2A70A3251F95C9467ACB0500B5C /* libCSLCommonLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCSLCommonLibrary.a; path = libCSLCommonLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4487B4618B588A3DD8AD5D2160AEC74 /* UIAlertView+DelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+DelegateProxy.h"; path = "CSLCommonLibrary/UIAlertView+DelegateProxy.h"; sourceTree = "<group>"; };
-		D63E82B964FEE9485DAFB73B2DFCD8A6 /* CSLDelegateProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSLDelegateProxy.m; path = CSLCommonLibrary/CSLDelegateProxy.m; sourceTree = "<group>"; };
-		DD98D0F7BB22AD50A1C01B43BAFD4138 /* NSObject+Base.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Base.m"; path = "CSLCommonLibrary/NSObject+Base.m"; sourceTree = "<group>"; };
-		EC772325BF0CED9F05912D46F0C8D7A7 /* NSInvocation+Base.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+Base.h"; path = "CSLCommonLibrary/NSInvocation+Base.h"; sourceTree = "<group>"; };
+		C53BC373764194206A70456D1053063D /* BaseObserver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BaseObserver.h; path = CSLCommonLibrary/BaseObserver.h; sourceTree = "<group>"; };
+		CF3A98227D417BFB3CBCF061E391EFEC /* BaseObserver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BaseObserver.m; path = CSLCommonLibrary/BaseObserver.m; sourceTree = "<group>"; };
+		CF513EBC65DC50831BAE153CF5E2E7E1 /* NSObject+Base.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Base.m"; path = "CSLCommonLibrary/NSObject+Base.m"; sourceTree = "<group>"; };
+		CFF166306209A6B591CE6CA910AC73FB /* CSLCommonLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CSLCommonLibrary-prefix.pch"; sourceTree = "<group>"; };
+		D1890FF81C24512EC8713A566E626357 /* UICollectionReusableView+DelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UICollectionReusableView+DelegateProxy.h"; path = "CSLCommonLibrary/UICollectionReusableView+DelegateProxy.h"; sourceTree = "<group>"; };
+		D1F089F2AA35FCB69688BFEEBC387A44 /* NSInvocation+Base.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+Base.h"; path = "CSLCommonLibrary/NSInvocation+Base.h"; sourceTree = "<group>"; };
+		D656C4A32A0233155E5B79105899B297 /* UIGestureRecognizer+Action.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIGestureRecognizer+Action.m"; path = "CSLCommonLibrary/UIGestureRecognizer+Action.m"; sourceTree = "<group>"; };
+		D7F1E660256700B83E1BC601E8EA7429 /* UIGestureRecognizer+Action.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIGestureRecognizer+Action.h"; path = "CSLCommonLibrary/UIGestureRecognizer+Action.h"; sourceTree = "<group>"; };
+		D98202B19D1B73B5FF8A3BE48669F464 /* UIImagePickerController+DelegateProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImagePickerController+DelegateProxy.m"; path = "CSLCommonLibrary/UIImagePickerController+DelegateProxy.m"; sourceTree = "<group>"; };
+		E0EE6222963D6857FD96C964899B8A08 /* NSNotificationCenter+Base.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+Base.m"; path = "CSLCommonLibrary/NSNotificationCenter+Base.m"; sourceTree = "<group>"; };
 		EF2F7BF956D98118535DD82B4E2F2800 /* libPods-CSLCommonLibraryDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-CSLCommonLibraryDemo.a"; path = "libPods-CSLCommonLibraryDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F06763A1AB991A5D2B3F9243B5357432 /* NSNotificationCenter+Base.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+Base.h"; path = "CSLCommonLibrary/NSNotificationCenter+Base.h"; sourceTree = "<group>"; };
-		F221F4B68CBCEDD4B51A2E9063EEC006 /* UIActionSheet+DelegateProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActionSheet+DelegateProxy.m"; path = "CSLCommonLibrary/UIActionSheet+DelegateProxy.m"; sourceTree = "<group>"; };
-		F30FC6F4EDAC23463AFEB5B7F15776CE /* UIAlertView+DelegateProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+DelegateProxy.m"; path = "CSLCommonLibrary/UIAlertView+DelegateProxy.m"; sourceTree = "<group>"; };
 		F67F93DDF5ED0529B766D1B066FA566F /* Pods-CSLCommonLibraryDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CSLCommonLibraryDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FA8629F436476500D2A376056BEE3D8E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		FF692C71B7AFE1165709731C5A494EB4 /* CSLCommonLibrary.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CSLCommonLibrary.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F87506364D7746B4295F088E63561F14 /* UIActionSheet+DelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActionSheet+DelegateProxy.h"; path = "CSLCommonLibrary/UIActionSheet+DelegateProxy.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2374CE03FFF6BC5A5E9C26CED317FC4B /* Frameworks */ = {
+		77BDB728C8149AC3D90E6551892350C7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -100,15 +108,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5293866DD830F5D5C0B95227D5720F6F /* Support Files */ = {
+		2AC1096738508B7AED0DCE250CA30D2E /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				99DEED9B308473312D3476AC9456ACC3 /* CSLCommonLibrary.xcconfig */,
-				92F6F4B1DA9F1C389C043402CEA30561 /* CSLCommonLibrary-dummy.m */,
-				149C7B058452C5D20CE76588FE3D8B1A /* CSLCommonLibrary-prefix.pch */,
+				66A92DA4E6A0A7F74E0E3B78F3FE3DFD /* CSLCommonLibrary.podspec */,
+				06FC7B3C3601369B35BF43CF729CD0F0 /* LICENSE */,
+				5433BC92E9843F9D33B4FF2B224639DB /* README.md */,
 			);
-			name = "Support Files";
-			path = "CSLCommonLibraryDemo/Pods/Target Support Files/CSLCommonLibrary";
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		4C664940790DC4692DFA0AA6652D555C /* CSLCommonLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				C53BC373764194206A70456D1053063D /* BaseObserver.h */,
+				CF3A98227D417BFB3CBCF061E391EFEC /* BaseObserver.m */,
+				92F955560515450AF99744E771044746 /* CSLBaseObject.h */,
+				610A4DB188B6AF6873A2DD18F6E4B1A9 /* CSLBaseObject.m */,
+				7E542CE848159F4731A007944D2F5C91 /* CSLDelegateProxy.h */,
+				5F9E20CC1DFFDB7562BE9BF47D366C6B /* CSLDelegateProxy.m */,
+				41D9CB345AFF632068E2E638D24CB73D /* KVOProxy.h */,
+				A823F70329E6F006E1D40B2C12302F68 /* KVOProxy.m */,
+				D1F089F2AA35FCB69688BFEEBC387A44 /* NSInvocation+Base.h */,
+				BDDA27B484460D966126F91557E991B7 /* NSInvocation+Base.m */,
+				BF5A0CE69A6CCAE92534CC25FCB7299E /* NSNotificationCenter+Base.h */,
+				E0EE6222963D6857FD96C964899B8A08 /* NSNotificationCenter+Base.m */,
+				7E7026E531632B784F2790CC7DD71138 /* NSObject+Base.h */,
+				CF513EBC65DC50831BAE153CF5E2E7E1 /* NSObject+Base.m */,
+				F87506364D7746B4295F088E63561F14 /* UIActionSheet+DelegateProxy.h */,
+				18FAE0E786AF79ABD4F1EDE578790E89 /* UIActionSheet+DelegateProxy.m */,
+				728019558AB18EB4D682216F3C8B44A5 /* UIAlertView+DelegateProxy.h */,
+				750BC37E66439A7CB49934C7773FDDB0 /* UIAlertView+DelegateProxy.m */,
+				D1890FF81C24512EC8713A566E626357 /* UICollectionReusableView+DelegateProxy.h */,
+				5F8C2987D0991F39500D8C987BA885C0 /* UICollectionReusableView+DelegateProxy.m */,
+				6C0142998218AA634D19A67FC7FC1752 /* UIControl+Events.h */,
+				22BE8F6A071DFAF4D2A951239E25D1A1 /* UIControl+Events.m */,
+				D7F1E660256700B83E1BC601E8EA7429 /* UIGestureRecognizer+Action.h */,
+				D656C4A32A0233155E5B79105899B297 /* UIGestureRecognizer+Action.m */,
+				865A0AA53B0DA9BE97143B9A71C9FD16 /* UIImagePickerController+DelegateProxy.h */,
+				D98202B19D1B73B5FF8A3BE48669F464 /* UIImagePickerController+DelegateProxy.m */,
+				2AC1096738508B7AED0DCE250CA30D2E /* Pod */,
+				A35DDD9F49F8BBC2903BE9078AA057D8 /* Support Files */,
+			);
+			name = CSLCommonLibrary;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		9D34F3F633DB169FEBEC2E4176E13B38 /* Targets Support Files */ = {
@@ -117,6 +160,17 @@
 				FDF1DC652C364D43D12064B69FF301A1 /* Pods-CSLCommonLibraryDemo */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A35DDD9F49F8BBC2903BE9078AA057D8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8EE308E3995FCD7F678D793D0EB555FC /* CSLCommonLibrary.xcconfig */,
+				0C68DB96BA101A7523A8D3F96C3BCD26 /* CSLCommonLibrary-dummy.m */,
+				CFF166306209A6B591CE6CA910AC73FB /* CSLCommonLibrary-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "CSLCommonLibraryDemo/Pods/Target Support Files/CSLCommonLibrary";
 			sourceTree = "<group>";
 		};
 		B35A18A22C68C41D18FB6D98B43274FA /* Products */ = {
@@ -132,19 +186,11 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D609B4BCC63FB8C70664A49E58204BB7 /* Development Pods */,
+				D8E5B0DA471CC68896ED8F55EBD5608A /* Development Pods */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
 				B35A18A22C68C41D18FB6D98B43274FA /* Products */,
 				9D34F3F633DB169FEBEC2E4176E13B38 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D609B4BCC63FB8C70664A49E58204BB7 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				EE94C0CE5928108AD7F868496340F911 /* CSLCommonLibrary */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
@@ -154,46 +200,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EE94C0CE5928108AD7F868496340F911 /* CSLCommonLibrary */ = {
+		D8E5B0DA471CC68896ED8F55EBD5608A /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				94619652D1A24AC6A5ABAF8F439D35D1 /* BaseObserver.h */,
-				2BFF50EB4ACF5D9592A468707745CBE2 /* BaseObserver.m */,
-				2A4B00769165BCB6CE661D1DB4B61ECB /* CSLBaseObject.h */,
-				3CDCB5D91BD5A38F43CFD4C68ACB112A /* CSLBaseObject.m */,
-				2A773F07265363E2EF71A35F7A2D01F1 /* CSLDelegateProxy.h */,
-				D63E82B964FEE9485DAFB73B2DFCD8A6 /* CSLDelegateProxy.m */,
-				0242471147B1031638FA00893729E297 /* KVOProxy.h */,
-				7B79A6C06BDB9DA6DBAD740A0C321BB5 /* KVOProxy.m */,
-				EC772325BF0CED9F05912D46F0C8D7A7 /* NSInvocation+Base.h */,
-				19B60041BFA37251C6FD0B7F098EDB04 /* NSInvocation+Base.m */,
-				F06763A1AB991A5D2B3F9243B5357432 /* NSNotificationCenter+Base.h */,
-				16EA474DB90E2E6645BED76CE1821AD7 /* NSNotificationCenter+Base.m */,
-				A459A6BB2C227CA0C0B299DA6C25731D /* NSObject+Base.h */,
-				DD98D0F7BB22AD50A1C01B43BAFD4138 /* NSObject+Base.m */,
-				44918B598862283BCF1EA38932CFC0B6 /* UIActionSheet+DelegateProxy.h */,
-				F221F4B68CBCEDD4B51A2E9063EEC006 /* UIActionSheet+DelegateProxy.m */,
-				C4487B4618B588A3DD8AD5D2160AEC74 /* UIAlertView+DelegateProxy.h */,
-				F30FC6F4EDAC23463AFEB5B7F15776CE /* UIAlertView+DelegateProxy.m */,
-				4E85B1AD254A93580B7BD3662F8172E0 /* UIControl+Events.h */,
-				9ED243D97B2B06F895E2C2395761EBC0 /* UIControl+Events.m */,
-				180039814F351CE8816E2DD42B764583 /* UIGestureRecognizer+Action.h */,
-				97F9AD14600460DA58179EE5E907B6F1 /* UIGestureRecognizer+Action.m */,
-				F18A6C25C714ABA6711C99D198A94747 /* Pod */,
-				5293866DD830F5D5C0B95227D5720F6F /* Support Files */,
+				4C664940790DC4692DFA0AA6652D555C /* CSLCommonLibrary */,
 			);
-			name = CSLCommonLibrary;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		F18A6C25C714ABA6711C99D198A94747 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				FF692C71B7AFE1165709731C5A494EB4 /* CSLCommonLibrary.podspec */,
-				FA8629F436476500D2A376056BEE3D8E /* LICENSE */,
-				6A7249B461562EA9470EDC8E567337E2 /* README.md */,
-			);
-			name = Pod;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		FDF1DC652C364D43D12064B69FF301A1 /* Pods-CSLCommonLibraryDemo */ = {
@@ -212,21 +224,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		8FEAB1D0679D3605928BC5A129F3C642 /* Headers */ = {
+		4B059CFB029F38177C3BFD69B66C6779 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E242ABEDBF3098E3BA46B8C990956A76 /* BaseObserver.h in Headers */,
-				F66BFE74DBB4F3A82253FC93D728871A /* CSLBaseObject.h in Headers */,
-				9D8F51A7F9446F2FD58E4A75DEC763CA /* CSLDelegateProxy.h in Headers */,
-				17631D8E6B24BC02849D6F886E2D9A7C /* KVOProxy.h in Headers */,
-				B5F18B5B06269E9AE600A4EE6283A1E8 /* NSInvocation+Base.h in Headers */,
-				EAB2EF5D5F3E60748EC02195C7A29DDF /* NSNotificationCenter+Base.h in Headers */,
-				0788FC71F8B203F8E54F0CB7E9D85D89 /* NSObject+Base.h in Headers */,
-				00CA9B539C27A1D4A67E190EFCB7E0B2 /* UIActionSheet+DelegateProxy.h in Headers */,
-				A344C0AF64191BFF8AFD700258150545 /* UIAlertView+DelegateProxy.h in Headers */,
-				BE75F1D3AA8E22C59076677CA8BA0731 /* UIControl+Events.h in Headers */,
-				B0CAA4EFA80269D266613490EF95BBFC /* UIGestureRecognizer+Action.h in Headers */,
+				415FB0356936EB41F101B04EA2072917 /* BaseObserver.h in Headers */,
+				CFDA06590889AD1B44E754F4968A70D4 /* CSLBaseObject.h in Headers */,
+				F2A98B9032CA5B98F076DAE658C2A94C /* CSLDelegateProxy.h in Headers */,
+				DEB84DD230E8AD4370A2767D9420F6D3 /* KVOProxy.h in Headers */,
+				E6A42CB8343835D279513739CA876952 /* NSInvocation+Base.h in Headers */,
+				53DE49306C4D92406ADF98B20FD4DB32 /* NSNotificationCenter+Base.h in Headers */,
+				6E26F6EA5949ADCB25F5CD6AB68E039A /* NSObject+Base.h in Headers */,
+				45FBE6B67D71C55CCFA4F4F14D55093D /* UIActionSheet+DelegateProxy.h in Headers */,
+				76C58B06C108C3B2F714F7D4DE1AD65B /* UIAlertView+DelegateProxy.h in Headers */,
+				4F6BDE0152CBC3477C26EF1F30344094 /* UICollectionReusableView+DelegateProxy.h in Headers */,
+				65B81D8C2818C2641B544CF677BC642F /* UIControl+Events.h in Headers */,
+				88E786207CE4660A8676578ECC5DF40B /* UIGestureRecognizer+Action.h in Headers */,
+				F09CBB7C0D4933FFBCB905DB7BB8FCE6 /* UIImagePickerController+DelegateProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,11 +256,11 @@
 /* Begin PBXNativeTarget section */
 		8FDE1DF7CDA3B58D717012C35FB00ACF /* CSLCommonLibrary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE9124D17E484D9F3169F93D317D4864 /* Build configuration list for PBXNativeTarget "CSLCommonLibrary" */;
+			buildConfigurationList = E279AD8972520FD716F15F18EE0E7A54 /* Build configuration list for PBXNativeTarget "CSLCommonLibrary" */;
 			buildPhases = (
-				8FEAB1D0679D3605928BC5A129F3C642 /* Headers */,
-				9D4BB3BEB2715BA8B9EC17F34F581176 /* Sources */,
-				2374CE03FFF6BC5A5E9C26CED317FC4B /* Frameworks */,
+				4B059CFB029F38177C3BFD69B66C6779 /* Headers */,
+				C26A1AAAF106BE4BE64E4ECA0AAA2250 /* Sources */,
+				77BDB728C8149AC3D90E6551892350C7 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -311,22 +325,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9D4BB3BEB2715BA8B9EC17F34F581176 /* Sources */ = {
+		C26A1AAAF106BE4BE64E4ECA0AAA2250 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A66585FFB9CCA5416AC65E081F9B48E /* BaseObserver.m in Sources */,
-				12F2107856FEC93A1C1AD5EC1926AFC1 /* CSLBaseObject.m in Sources */,
-				C59DD1A0A4C87F21972A0D95F5959B54 /* CSLCommonLibrary-dummy.m in Sources */,
-				8E5869AF4CA09B33A05D9C02A5D113A7 /* CSLDelegateProxy.m in Sources */,
-				B903990BA57559B40C792EE618257B0E /* KVOProxy.m in Sources */,
-				9A53782CF5B4DC61332F00293D4EF937 /* NSInvocation+Base.m in Sources */,
-				F77367F0D99E9207AE282E3077735D3F /* NSNotificationCenter+Base.m in Sources */,
-				09BA8126A69C99312DD30BDF65175CD7 /* NSObject+Base.m in Sources */,
-				FB0BA8DC333CEB9CE5A2B57A57224DF8 /* UIActionSheet+DelegateProxy.m in Sources */,
-				1D0F8051BCD21F3C19C92C0B172CE714 /* UIAlertView+DelegateProxy.m in Sources */,
-				7F694E7C63E7EDF0362E0E1B63B7225F /* UIControl+Events.m in Sources */,
-				FB8E2BA88B2A95D3BD4F12DCF51714B7 /* UIGestureRecognizer+Action.m in Sources */,
+				12F9C58CF7269574AB67E6BFCF0C176F /* BaseObserver.m in Sources */,
+				2848797A43AD56A595BADFEF2BC38484 /* CSLBaseObject.m in Sources */,
+				7288124D43382F9AA65850CF1C51F575 /* CSLCommonLibrary-dummy.m in Sources */,
+				EFAD2CDF9F65778979E60F4FB84D2A91 /* CSLDelegateProxy.m in Sources */,
+				D83C6C864304BCE0F183FA10C164E213 /* KVOProxy.m in Sources */,
+				D17C12E9B852F2C1008FFD8FF98C2545 /* NSInvocation+Base.m in Sources */,
+				1019355CA84198936974A025656F12EF /* NSNotificationCenter+Base.m in Sources */,
+				2F86EA98F9391CD4B03ECA456E267868 /* NSObject+Base.m in Sources */,
+				478FC164A3D59419787B52C0AC1FC2D7 /* UIActionSheet+DelegateProxy.m in Sources */,
+				2B22D6D9D2D9C5062575A99917AB3F7B /* UIAlertView+DelegateProxy.m in Sources */,
+				6A8426869A1A8BE68D10027778E37D1D /* UICollectionReusableView+DelegateProxy.m in Sources */,
+				E9656DBE8B5F46D6A3D0B8B112D36AEA /* UIControl+Events.m in Sources */,
+				7E364363E17F86CDC5B7FE0BE31A8832 /* UIGestureRecognizer+Action.m in Sources */,
+				809DA92D97ACEFCD8A144128789B884E /* UIImagePickerController+DelegateProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,9 +379,9 @@
 			};
 			name = Debug;
 		};
-		1BB0B6E27BEBB9DF3E5C1D1985F47023 /* Debug */ = {
+		06B86D4A5C76B52C58A49925A32D5795 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99DEED9B308473312D3476AC9456ACC3 /* CSLCommonLibrary.xcconfig */;
+			baseConfigurationReference = 8EE308E3995FCD7F678D793D0EB555FC /* CSLCommonLibrary.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -468,6 +484,30 @@
 			};
 			name = Release;
 		};
+		656B54C0A81205C5FD5B95BE801D52B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EE308E3995FCD7F678D793D0EB555FC /* CSLCommonLibrary.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CSLCommonLibrary/CSLCommonLibrary-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CSLCommonLibrary;
+				PRODUCT_NAME = CSLCommonLibrary;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -532,30 +572,6 @@
 			};
 			name = Debug;
 		};
-		C77E06D7037A5DAA8D09D1AE60C11006 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99DEED9B308473312D3476AC9456ACC3 /* CSLCommonLibrary.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/CSLCommonLibrary/CSLCommonLibrary-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = CSLCommonLibrary;
-				PRODUCT_NAME = CSLCommonLibrary;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -577,11 +593,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE9124D17E484D9F3169F93D317D4864 /* Build configuration list for PBXNativeTarget "CSLCommonLibrary" */ = {
+		E279AD8972520FD716F15F18EE0E7A54 /* Build configuration list for PBXNativeTarget "CSLCommonLibrary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1BB0B6E27BEBB9DF3E5C1D1985F47023 /* Debug */,
-				C77E06D7037A5DAA8D09D1AE60C11006 /* Release */,
+				06B86D4A5C76B52C58A49925A32D5795 /* Debug */,
+				656B54C0A81205C5FD5B95BE801D52B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
