@@ -10,6 +10,7 @@
 #import "UIControl+Events.h"
 #import "UIGestureRecognizer+Action.h"
 #import "UIImagePickerController+DelegateProxy.h"
+#import "UITextView+DelegateProxy.h"
 
 @interface SecondViewController ()
 
@@ -62,7 +63,26 @@
     }];
     [viewC addGestureRecognizer:gesture];
     
-    
+    UITextView *textView = [UITextView new];
+    textView.frame = CGRectMake(0, 350, self.view.frame.size.width, 80);
+    textView.editable = YES;
+    textView.backgroundColor = [UIColor greenColor];
+    textView.textColor = [UIColor redColor];
+    textView.font = [UIFont systemFontOfSize:30];
+    textView.scrollEnabled = YES;
+    [textView beginEditing:^(UITextView * _Nonnull textView) {
+        NSLog(@"开始编辑");
+    }];
+    [textView endEditing:^(UITextView * _Nonnull textView) {
+        NSLog(@"结束编辑");
+    }];
+    [textView didChange:^(UITextView * _Nonnull textView) {
+        NSLog(@"编辑中的文字%@",textView.text);
+    }];
+    [textView didChangeSelection:^(UITextView * _Nonnull textView) {
+        NSLog(@"编辑中的文字变化%@",textView.text);
+    }];
+    [self.view addSubview:textView];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
