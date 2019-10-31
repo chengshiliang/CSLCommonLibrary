@@ -45,7 +45,9 @@
             [strongSelf presentViewController:vc animated:YES completion:nil];
         }
     }];
-    
+    [alertView shouldEnableFirstOtherButton:^BOOL(UIAlertView* alertView) {
+        return true;
+    }];
     [alertView show];
 }
 

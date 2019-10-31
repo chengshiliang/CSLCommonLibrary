@@ -10,12 +10,13 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIAlertView (DelegateProxy)
-- (void)buttonClicked:(void(^)(UIAlertView *actionView, int clickIndex))clickBlock;
-- (void)cancel:(void(^)(UIAlertView *actionView))cancelBlock;
-- (void)willPresent:(void(^)(UIAlertView *actionView))willPresentBlock;
-- (void)didPresent:(void(^)(UIAlertView *actionView))didPresentBlock;
-- (void)willDismiss:(void(^)(UIAlertView *actionView, int clickIndex))willDismissBlock;
-- (void)didDismiss:(void(^)(UIAlertView *actionView, int clickIndex))didDismissBlock;
+- (void)buttonClicked:(void(^)(UIAlertView *alertView, int clickIndex))clickBlock;
+- (void)cancel:(void(^)(UIAlertView *alertView))cancelBlock;
+- (void)willPresent:(void(^)(UIAlertView *alertView))willPresentBlock;
+- (void)didPresent:(void(^)(UIAlertView *alertView))didPresentBlock;
+- (void)willDismiss:(void(^)(UIAlertView *alertView, int clickIndex))willDismissBlock;
+- (void)didDismiss:(void(^)(UIAlertView *alertView, int clickIndex))didDismissBlock;
+- (void)shouldEnableFirstOtherButton:(BOOL (^)(UIAlertView* alerView))shouldEnableFirstOtherButtonBlock;
 @end
 
 NS_ASSUME_NONNULL_END

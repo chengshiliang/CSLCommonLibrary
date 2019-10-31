@@ -65,10 +65,9 @@ static BOOL ForwardInvocation(id self, NSInvocation *invocation) {
     }
     NSArray *result = ArgumentsTuple(invocation);
     void(^callback)(id)  = objc_getAssociatedObject(self, aliasSelector);
-    if (callback) {
-        callback(result);
-    }
-    return respondsToAlias;
+    if (!callback) return respondsToAlias;
+    callback(result);
+    return YES;
 }
 
 static void SwizzleForwardInvocation(Class class) {

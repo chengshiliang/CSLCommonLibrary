@@ -403,6 +403,30 @@
 			};
 			name = Debug;
 		};
+		12FF463D283204429ADE6E790D656835 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CAF5AA360A1477126D164C73ED128C1 /* CSLCommonLibrary.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CSLCommonLibrary/CSLCommonLibrary-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CSLCommonLibrary;
+				PRODUCT_NAME = CSLCommonLibrary;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		4011BBCF52BE91964A7CE70252DD7F1C /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 400A982066423DB53DECAF9312549FD2 /* Pods-CSLCommonLibraryDemo.release.xcconfig */;
@@ -485,53 +509,6 @@
 			};
 			name = Release;
 		};
-		666B7A8BCF8F0E6A5F230F00D82EA209 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4CAF5AA360A1477126D164C73ED128C1 /* CSLCommonLibrary.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/CSLCommonLibrary/CSLCommonLibrary-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = CSLCommonLibrary;
-				PRODUCT_NAME = CSLCommonLibrary;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		685CDD3C760BD3565DDC137A0B08BC82 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4CAF5AA360A1477126D164C73ED128C1 /* CSLCommonLibrary.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/CSLCommonLibrary/CSLCommonLibrary-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = CSLCommonLibrary;
-				PRODUCT_NAME = CSLCommonLibrary;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -596,14 +573,37 @@
 			};
 			name = Debug;
 		};
+		8A07814C13810E1B6263159F891BB895 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CAF5AA360A1477126D164C73ED128C1 /* CSLCommonLibrary.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/CSLCommonLibrary/CSLCommonLibrary-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = CSLCommonLibrary;
+				PRODUCT_NAME = CSLCommonLibrary;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		28DF7E25F5A8C991053DAE4149EB8904 /* Build configuration list for PBXNativeTarget "CSLCommonLibrary" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				685CDD3C760BD3565DDC137A0B08BC82 /* Debug */,
-				666B7A8BCF8F0E6A5F230F00D82EA209 /* Release */,
+				8A07814C13810E1B6263159F891BB895 /* Debug */,
+				12FF463D283204429ADE6E790D656835 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

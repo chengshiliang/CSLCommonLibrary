@@ -19,6 +19,8 @@
 - (instancetype)initWithDelegateProxy:(Protocol *)protocol {
     NSCParameterAssert(protocol != NULL);
     
+    self = [super init];
+    
     self.protocol = protocol;
     class_addProtocol(self.class, protocol);
     
@@ -34,6 +36,7 @@
 }
 
 - (void)forwardInvocation:(NSInvocation *)invocation {
+    NSLog(@"forwardInvocation%@",NSStringFromSelector(invocation.selector));
     [invocation invokeWithTarget:self.delegate];
 }
 
