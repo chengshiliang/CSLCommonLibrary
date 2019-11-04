@@ -36,7 +36,6 @@
 }
 
 - (void)forwardInvocation:(NSInvocation *)invocation {
-    NSLog(@"forwardInvocation%@",NSStringFromSelector(invocation.selector));
     [invocation invokeWithTarget:self.delegate];
 }
 

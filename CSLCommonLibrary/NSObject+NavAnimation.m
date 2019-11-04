@@ -11,18 +11,27 @@
 #import <objc/runtime.h>
 
 static void *kNavAnimationTransitionDurationKey = "kNavAnimationTransitionDurationKey";
+static void *kNavAnimationTransitionKey = "kNavAnimationTransitionKey";
+static void *kNavAnimationEndedKey = "kNavAnimationEndedKey";
 
 @implementation NSObject (NavAnimation)
 - (void)transitionDurationBlock:(NSTimeInterval(^)(_Nullable id <UIViewControllerContextTransitioning> transitionContext))transitionDurationBlock {
     objc_setAssociatedObject(self, kNavAnimationTransitionDurationKey, transitionDurationBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-- (void)animateTransition:(void(^)(id <UIViewControllerContextTransitioning> transitionContext))animateTransitionBlock {
-    [self.delegateProxy addSelector:@selector(animateTransition:) callback:^(NSArray *params) {
-        if (animateTransitionBlock && params && params.count == 2) {
-            animateTransitionBlock(params[1]);
-        }
-    }];
+- (void)animateTransitionBlock:(void(^)(id <UIViewControllerContextTransitioning> transitionContext))animateTransitionBlock {
+    objc_setAssociatedObject(self, kNavAnimationTransitionKey, animateTransitionBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (void)animationEndedBlock:(void(^)(BOOL transitionCompleted))animationEndedBlock {
+    objc_setAssociatedObject(self, kNavAnimationEndedKey, animationEndedBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (void)animationEnded:(BOOL)transitionCompleted{
+    void(^animationEndedBlock)(BOOL transitionComplet) = objc_getAssociatedObject(self, kNavAnimationEndedKey);
+    if (animationEndedBlock) {
+        animationEndedBlock(transitionCompleted);
+    }
 }
 
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext {
@@ -33,13 +42,11 @@ static void *kNavAnimationTransitionDurationKey = "kNavAnimationTransitionDurati
     return 0.0f;
 }
 
-- (void)animationEnded:(void(^)(BOOL transitionCompleted))animationEndedBlock {
-    [self.delegateProxy addSelector:@selector(animationEnded:) callback:^(NSArray *params) {
-        NSLog(@"transition animationEnded%@", params);
-        if (animationEndedBlock && params && params.count ==1) {
-            animationEndedBlock([params[0] boolValue]);
-        }
-    }];
+- (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
+    void(^animateTransitionBlock)(id <UIViewControllerContextTransitioning> transitionContext) = objc_getAssociatedObject(self, kNavAnimationTransitionKey);
+    if (animateTransitionBlock) {
+        animateTransitionBlock(transitionContext);
+    }
 }
 
 - (CSLDelegateProxy *)delegateProxy {
@@ -51,8 +58,4 @@ static void *kNavAnimationTransitionDurationKey = "kNavAnimationTransitionDurati
     }
     return delegateProxy;
 }
-
-//- (void)dealloc {
-//    NSLog(@"nav animation dealloc");
-//}
 @end
