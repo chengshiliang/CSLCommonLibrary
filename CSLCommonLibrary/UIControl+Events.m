@@ -36,7 +36,7 @@ static void *kControl_Key = "kControl_Key";
     }
 }
 
-- (void)dealloc {
-    NSLog(@"control dealloc");
-}
+//- (void)dealloc {
+//    NSLog(@"control dealloc");
+//}
 @end
