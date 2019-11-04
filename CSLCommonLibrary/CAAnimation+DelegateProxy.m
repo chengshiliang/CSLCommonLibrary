@@ -14,31 +14,24 @@ static void * kCAAnimationDidStopKey = "kCAAnimationDidStopKey";
 
 @implementation CAAnimation (DelegateProxy)
 - (void)animationDidStartBlock:(void(^)(CAAnimation *anim))animationDidStartBlock {
-    objc_setAssociatedObject(self, kCAAnimationDidStartKey, animationDidStartBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    [self.delegateProxy addSelector:@selector(animationDidStart:) callback:^(NSArray *params) {
+        if (animationDidStartBlock && params && params.count == 1) {
+            animationDidStartBlock(params[0]);
+        }
+    }];
 }
-- (void)animationDidStopBlock:(void(^)(CAAnimation *anim))animationDidStopBlock {
-    objc_setAssociatedObject(self, kCAAnimationDidStopKey, animationDidStopBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
-- (void)animationDidStart:(CAAnimation *)anim {
-    void(^animationDidStartBlock)(CAAnimation * animation) = objc_getAssociatedObject(self, kCAAnimationDidStartKey);
-    if (animationDidStartBlock) {
-        animationDidStartBlock(anim);
-    }
-}
-
-- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-    void(^animationDidStopBlock)(CAAnimation * animation) = objc_getAssociatedObject(self, kCAAnimationDidStopKey);
-    if (animationDidStopBlock) {
-        animationDidStopBlock(anim);
-    }
+- (void)animationDidStopBlock:(void(^)(CAAnimation *anim,BOOL finished))animationDidStopBlock {
+    [self.delegateProxy addSelector:@selector(animationDidStop:finished:) callback:^(NSArray *params) {
+        if (animationDidStopBlock && params && params.count == 2) {
+            animationDidStopBlock(params[0],[params[1] boolValue]);
+        }
+    }];
 }
 
 - (CSLDelegateProxy *)delegateProxy {
     CSLDelegateProxy *delegateProxy = objc_getAssociatedObject(self, _cmd);
     if (!delegateProxy) {
         delegateProxy = [[CSLDelegateProxy alloc]initWithDelegateProxy:@protocol(CAAnimationDelegate)];
-        delegateProxy.delegate = self;
         self.delegate = (id<CAAnimationDelegate>)delegateProxy;
         objc_setAssociatedObject(self, _cmd, delegateProxy, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }

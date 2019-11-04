@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CAAnimation (DelegateProxy)
 - (void)animationDidStartBlock:(void(^)(CAAnimation *anim))animationDidStartBlock;
-- (void)animationDidStopBlock:(void(^)(CAAnimation *anim))animationDidStopBlock;
+- (void)animationDidStopBlock:(void(^)(CAAnimation *animm,BOOL finished))animationDidStopBlock;
 @end
 
 NS_ASSUME_NONNULL_END
