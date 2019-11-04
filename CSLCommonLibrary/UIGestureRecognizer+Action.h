@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIGestureRecognizer (Action)
-- (void)on:(NSObject *)target click:(void(^)(UIGestureRecognizer *))clickBlock;
+- (void)on:(NSObject *)target click:(void(^)(UIGestureRecognizer *gesture))clickBlock;
 @end
 
 NS_ASSUME_NONNULL_END

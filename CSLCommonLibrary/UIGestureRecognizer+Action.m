@@ -12,7 +12,7 @@
 static void *kGesture_Key = "kGesture_Key";
 
 @implementation UIGestureRecognizer (Action)
-- (void)on:(NSObject *)target click:(void(^)(UIGestureRecognizer *))clickBlock{
+- (void)on:(NSObject *)target click:(void(^)(UIGestureRecognizer *gesture))clickBlock{
     [self addTarget:self action:@selector(onClick:)];
     [self setClickBlock:clickBlock];
     __weak __typeof(self)weakSelf = self;
@@ -22,11 +22,11 @@ static void *kGesture_Key = "kGesture_Key";
     }];
 }
 
-- (void)setClickBlock:(void (^)(UIGestureRecognizer *))clickBlock {
+- (void)setClickBlock:(void (^)(UIGestureRecognizer *gesture))clickBlock {
     objc_setAssociatedObject(self, kGesture_Key, clickBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
-- (void (^)(UIGestureRecognizer *))clickBlock {
+- (void (^)(UIGestureRecognizer *gesture))clickBlock {
     return objc_getAssociatedObject(self, kGesture_Key);
 }
 
