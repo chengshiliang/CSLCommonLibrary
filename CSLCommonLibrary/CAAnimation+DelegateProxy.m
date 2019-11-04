@@ -9,9 +9,6 @@
 #import "CSLDelegateProxy.h"
 #import <objc/runtime.h>
 
-static void * kCAAnimationDidStartKey = "kCAAnimationDidStartKey";
-static void * kCAAnimationDidStopKey = "kCAAnimationDidStopKey";
-
 @implementation CAAnimation (DelegateProxy)
 - (void)animationDidStartBlock:(void(^)(CAAnimation *anim))animationDidStartBlock {
     [self.delegateProxy addSelector:@selector(animationDidStart:) callback:^(NSArray *params) {
