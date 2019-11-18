@@ -11,9 +11,11 @@
 #import "UIGestureRecognizer+Action.h"
 #import "UIImagePickerController+DelegateProxy.h"
 #import "UITextView+DelegateProxy.h"
+#import "SLTimer.h"
 
 @interface SecondViewController ()
 @property (nonatomic, strong)UITextView *textView;
+@property (nonatomic, strong)NSTimer *timer;
 @end
 
 @implementation SecondViewController
@@ -85,6 +87,19 @@
     }];
     [self.view addSubview:textView];
     self.textView = textView;
+    
+    self.timer = [SLTimer sl_timerWithTimeInterval:0.5 target:self userInfo:@{@"timerKey": @"timerValue"} repeats:YES mode:NSDefaultRunLoopMode callback:^(NSArray * _Nonnull array) {
+        if (array && array.count == 1) {
+            NSTimer *timer = array[0];
+            NSLog(@"timer%@------userinfo%@", timer, timer.userInfo);
+        }
+        __strong typeof (weakSelf) strongSelf = weakSelf;
+        static int count = 0;
+        if (count > 5) {
+            [strongSelf.timer invalidate];
+        }
+        count ++;
+    }];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
