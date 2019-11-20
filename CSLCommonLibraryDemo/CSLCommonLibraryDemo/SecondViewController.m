@@ -7,13 +7,6 @@
 //
 
 #import "SecondViewController.h"
-#import "UIControl+Events.h"
-#import "UIGestureRecognizer+Action.h"
-#import "UIImagePickerController+DelegateProxy.h"
-#import "UITextView+DelegateProxy.h"
-#import "BaseObserver.h"
-#import "NSObject+Base.h"
-#import "SLTimer.h"
 
 #import "TestModel.h"
 

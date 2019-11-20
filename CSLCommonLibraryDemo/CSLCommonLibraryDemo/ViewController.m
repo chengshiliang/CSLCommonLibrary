@@ -9,12 +9,6 @@
 #import "ViewController.h"
 #import "SecondViewController.h"
 
-#import "NSNotificationCenter+Base.h"
-#import "BaseObserver.h"
-#import "CSLBaseObject.h"
-#import "CSLDelegateProxy.h"
-#import "UIAlertView+DelegateProxy.h"
-
 #import "TestModel.h"
 
 @interface ViewController ()
