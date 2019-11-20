@@ -11,11 +11,17 @@
 #import "UIGestureRecognizer+Action.h"
 #import "UIImagePickerController+DelegateProxy.h"
 #import "UITextView+DelegateProxy.h"
+#import "BaseObserver.h"
+#import "NSObject+Base.h"
 #import "SLTimer.h"
+
+#import "TestModel.h"
 
 @interface SecondViewController ()
 @property (nonatomic, strong)UITextView *textView;
-@property (nonatomic, strong)NSTimer *timer;
+@property (nonatomic, strong)SLTimer *timer;
+@property (nonatomic, strong) TestModel *model;
+@property (nonatomic, strong) BaseObserver *observer;
 @end
 
 @implementation SecondViewController
@@ -23,7 +29,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    self.observer = [[BaseObserver alloc]initWithTarget:self keyPath:@"model.str" options:NSKeyValueObservingOptionNew block:^(id  _Nonnull target, NSDictionary * _Nonnull change) {
+        NSLog(@"kvo~~~~%@", change[@"new"]);
+    }];
     __weak typeof (self) weakSelf = self;
     UIControl *control = [[UIControl alloc]init];
     [control onEventChange:self event:UIControlEventTouchUpInside change:^(UIControl * control) {
@@ -100,13 +108,13 @@
         }
         count ++;
     }];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    if (self.delegate && [self.delegate respondsToSelector:@selector(doSomething::)]) {
-        [self.delegate doSomething:true :@"hello"];
-    }
+    
+    [self swizzDisappearMethod:self callback:^(NSObject *__unsafe_unretained  _Nonnull disappearObj) {
+        __strong typeof (weakSelf) strongSelf = weakSelf;
+        if (strongSelf.delegate && [strongSelf.delegate respondsToSelector:@selector(doSomething::)]) {
+           [strongSelf.delegate doSomething:true :@"hello"];
+        }
+    }];
 }
 
 - (void)dealloc {

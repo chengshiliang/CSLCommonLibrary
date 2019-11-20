@@ -1,5 +1,5 @@
 PODS:
-  - CSLCommonLibrary (0.2.4)
+  - CSLCommonLibrary (0.2.5)
 
 DEPENDENCIES:
   - CSLCommonLibrary (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CSLCommonLibrary: f76cf7f2559303f0d4459dff3f73573440dc07a3
+  CSLCommonLibrary: e6991122ad81f08c09ae22330f2c4fbbf78b83e9
 
 PODFILE CHECKSUM: 318095f2a7cad110021756814123ada1dc32fc38
 

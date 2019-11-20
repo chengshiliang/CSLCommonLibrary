@@ -68,6 +68,10 @@
         NSLog(@"kvo---%@", change[@"new"]);
     }];
     
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.model.str = @"teststring";
+    });
+    
     [[NSNotificationCenter defaultCenter]addTarget:self noidtificationName:@"123" object:nil block:^(NSNotification * _Nonnull data) {
         NSLog(@"notify----data%@", data);
     }];

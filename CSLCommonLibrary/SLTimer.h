@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SLTimer : NSTimer
-+ (NSTimer *)sl_timerWithTimeInterval:(NSTimeInterval)timeInterval
++ (instancetype)sl_timerWithTimeInterval:(NSTimeInterval)timeInterval
                                   target:(id)aTarget
                                 userInfo:(nullable id)userInfo
                                  repeats:(BOOL)repeat

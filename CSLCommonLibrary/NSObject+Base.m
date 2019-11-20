@@ -27,6 +27,8 @@ static NSMutableSet *swizzledClasses() {
 static NSString * const SelectorAliasPrefix = @"csl_alias_";
 static NSString * const SubclassSuffix = @"_Selector";
 static void *SubclassAssociationKey = &SubclassAssociationKey;
+static void *ClassDeallocAssociationKey = &ClassDeallocAssociationKey;
+static void *ClassDisappearAssociationKey = &ClassDisappearAssociationKey;
 
 static NSArray* ArgumentsTuple(NSInvocation *invocation) {
     NSUInteger numberOfArguments = invocation.methodSignature.numberOfArguments;
@@ -245,14 +247,26 @@ static void NSObjectForSelector(NSObject *target, SEL selector, Protocol *protoc
 
 - (void)swizzDeallocMethod:(NSObject *)target callback:(void(^)(__unsafe_unretained NSObject *deallocObj))callback {
     @synchronized (swizzledClasses()) {
+        NSMutableArray *callbackArrayM = objc_getAssociatedObject(target, ClassDeallocAssociationKey);
+        if (!callbackArrayM) {
+            callbackArrayM = [NSMutableArray array];
+        }
+        [callbackArrayM addObject:[callback copy]];
+        objc_setAssociatedObject(target, ClassDeallocAssociationKey, callbackArrayM.mutableCopy, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         Class classToSwizzle = target.class;
+        NSString *className = [NSStringFromClass(classToSwizzle) stringByAppendingString:@"Dealloc"];
+        if ([swizzledClasses() containsObject:className]) return;
         SEL deallocSelector = sel_registerName("dealloc");
-        Method deallocMethod = class_getInstanceMethod(classToSwizzle, deallocSelector);
-        IMP tempIMP = method_getImplementation(deallocMethod);
         __block void (*originalDealloc)(__unsafe_unretained id, SEL) = NULL;
         id newDealloc = ^(__unsafe_unretained NSObject *deallocObj) {
-            if (callback) {
-                callback(deallocObj);
+            ;
+            NSMutableArray *realCallbackArray = objc_getAssociatedObject(deallocObj, ClassDeallocAssociationKey);
+            if (realCallbackArray) {
+                for (void(^currentCallback)(__unsafe_unretained NSObject *deallocObj) in realCallbackArray) {
+                    if (currentCallback) {
+                        currentCallback(deallocObj);
+                    }
+                }
             }
             if (originalDealloc == NULL) {
                 struct objc_super superInfo = {
@@ -265,15 +279,60 @@ static void NSObjectForSelector(NSObject *target, SEL selector, Protocol *protoc
             } else {
                 originalDealloc(deallocObj, deallocSelector);
             }
-            method_setImplementation(deallocMethod, tempIMP);
         };
         
         IMP newDeallocIMP = imp_implementationWithBlock(newDealloc);
-        
-        if (!class_addMethod(classToSwizzle, deallocSelector, newDeallocIMP, "v@:")) {
+        Method deallocMethod = class_getInstanceMethod(classToSwizzle, deallocSelector);
+        if (!class_addMethod(classToSwizzle, deallocSelector, newDeallocIMP, method_getTypeEncoding(deallocMethod))) {
             originalDealloc = (__typeof__(originalDealloc))method_getImplementation(deallocMethod);
             originalDealloc = (__typeof__(originalDealloc))method_setImplementation(deallocMethod, newDeallocIMP);
         }
+        [swizzledClasses() addObject:className];
+    }
+}
+
+- (void)swizzDisappearMethod:(NSObject *)target callback:(void(^)(__unsafe_unretained NSObject *disappearObj))callback {
+    @synchronized (swizzledClasses()) {
+        NSMutableArray *callbackArrayM = objc_getAssociatedObject(target, ClassDisappearAssociationKey);
+        if (!callbackArrayM) {
+            callbackArrayM = [NSMutableArray array];
+        }
+        [callbackArrayM addObject:[callback copy]];
+        objc_setAssociatedObject(target, ClassDisappearAssociationKey, callbackArrayM.mutableCopy, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        Class classToSwizzle = target.class;
+        NSString *className = [NSStringFromClass(classToSwizzle) stringByAppendingString:@"Disappear"];
+        if ([swizzledClasses() containsObject:className]) return;
+        SEL disappearSelector = sel_registerName("viewWillDisappear:");
+        __block void (*originalDisappear)(__unsafe_unretained id, SEL) = NULL;
+        id newDisappear = ^(__unsafe_unretained NSObject *disappearObj) {
+            NSMutableArray *realCallbackArray = objc_getAssociatedObject(disappearObj, ClassDisappearAssociationKey);
+            if (realCallbackArray) {
+                for (void(^currentCallback)(__unsafe_unretained NSObject *deallocObj) in realCallbackArray) {
+                    if (currentCallback) {
+                        currentCallback(disappearObj);
+                    }
+                }
+            }
+            if (originalDisappear == NULL) {
+                struct objc_super superInfo = {
+                    .receiver = disappearObj,
+                    .super_class = class_getSuperclass(classToSwizzle)
+                };
+                
+                void (*msgSend)(struct objc_super *, SEL) = (__typeof__(msgSend))objc_msgSendSuper;
+                msgSend(&superInfo, disappearSelector);
+            } else {
+                originalDisappear(disappearObj, disappearSelector);
+            }
+        };
+        
+        IMP newDisappearIMP = imp_implementationWithBlock(newDisappear);
+        Method disappearMethod = class_getInstanceMethod(classToSwizzle, disappearSelector);
+        if (!class_addMethod(classToSwizzle, disappearSelector, newDisappearIMP, method_getTypeEncoding(disappearMethod))) {
+            originalDisappear = (__typeof__(originalDisappear))method_getImplementation(disappearMethod);
+            originalDisappear = (__typeof__(originalDisappear))method_setImplementation(disappearMethod, newDisappearIMP);
+        }
+        [swizzledClasses() addObject:className];
     }
 }
 
