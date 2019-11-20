@@ -267,6 +267,7 @@ static void NSObjectForSelector(NSObject *target, SEL selector, Protocol *protoc
                         currentCallback(deallocObj);
                     }
                 }
+                objc_setAssociatedObject(deallocObj, ClassDeallocAssociationKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
             }
             if (originalDealloc == NULL) {
                 struct objc_super superInfo = {
@@ -307,11 +308,12 @@ static void NSObjectForSelector(NSObject *target, SEL selector, Protocol *protoc
         id newDisappear = ^(__unsafe_unretained NSObject *disappearObj) {
             NSMutableArray *realCallbackArray = objc_getAssociatedObject(disappearObj, ClassDisappearAssociationKey);
             if (realCallbackArray) {
-                for (void(^currentCallback)(__unsafe_unretained NSObject *deallocObj) in realCallbackArray) {
+                for (void(^currentCallback)(__unsafe_unretained NSObject *disappearObj) in realCallbackArray) {
                     if (currentCallback) {
                         currentCallback(disappearObj);
                     }
                 }
+                objc_setAssociatedObject(disappearObj, ClassDisappearAssociationKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
             }
             if (originalDisappear == NULL) {
                 struct objc_super superInfo = {
