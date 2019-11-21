@@ -27,5 +27,6 @@
 #import <CSLCommonLibrary/UITableViewCell+DelegateProxy.h>
 #import <CSLCommonLibrary/UITableViewHeaderFooterView+DelegateProxy.h>
 #import <CSLCommonLibrary/UITextView+DelegateProxy.h>
+#import <CSLCommonLibrary/UIViewController+DelegateProxy.h>
 
 #endif /* SLCommonLibrary_h */

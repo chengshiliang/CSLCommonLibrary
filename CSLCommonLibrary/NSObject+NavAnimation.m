@@ -20,6 +20,7 @@ static void *kNavAnimationEndedKey = "kNavAnimationEndedKey";
 }
 
 - (void)animateTransitionBlock:(void(^)(id <UIViewControllerContextTransitioning> transitionContext))animateTransitionBlock {
+    [self delegateProxy];
     objc_setAssociatedObject(self, kNavAnimationTransitionKey, animateTransitionBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
