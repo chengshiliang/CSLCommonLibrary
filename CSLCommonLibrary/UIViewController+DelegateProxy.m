@@ -14,9 +14,12 @@ static void *kPresentAnimationTransitionDissmissControllerKey = "kPresentAnimati
 static void *kPresentAnimationTransitionInteractionPresentingControllerKey = "kPresentAnimationTransitionInteractionPresentingControllerKey";
 static void *kPresentAnimationTransitionInteractionDissmissedControllerKey = "kPresentAnimationTransitionInteractionDissmissedControllerKey";
 
-@implementation NSObject (PresentAnimation)
+@implementation UIViewController (PresentAnimation)
+- (void)addPresentedController:(UIViewController *)presentedController {
+    presentedController.transitioningDelegate = (id <UIViewControllerTransitioningDelegate>)[self delegateProxy];
+}
+
 - (void)presentingControllerBlock:(nullable id <UIViewControllerAnimatedTransitioning>(^)(UIViewController *presentingController, UIViewController *sourceController))presentingControllerBlock {
-    [self delegateProxy];
     objc_setAssociatedObject(self, &kPresentAnimationTransitionPresentControllerKey, presentingControllerBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
@@ -26,6 +29,10 @@ static void *kPresentAnimationTransitionInteractionDissmissedControllerKey = "kP
 
 - (void)interactionPresentingControllerBlock:(nullable id <UIViewControllerInteractiveTransitioning>(^)(id <UIViewControllerAnimatedTransitioning> animator))interactionPresentingControllerBlock {
     objc_setAssociatedObject(self, &kPresentAnimationTransitionInteractionPresentingControllerKey, interactionPresentingControllerBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (void)interactionDismissedControllerBlock:(nullable id <UIViewControllerInteractiveTransitioning>(^)(id <UIViewControllerAnimatedTransitioning> animator))interactionDismissedControllerBlock {
+    objc_setAssociatedObject(self, &kPresentAnimationTransitionInteractionDissmissedControllerKey, interactionDismissedControllerBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
@@ -45,17 +52,15 @@ static void *kPresentAnimationTransitionInteractionDissmissedControllerKey = "kP
 }
 
 - (nullable id <UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id <UIViewControllerAnimatedTransitioning>)animator {
-    id <UIViewControllerInteractiveTransitioning>(^interactionPresentingControllerBlock)(id <UIViewControllerAnimatedTransitioning> animator) = objc_getAssociatedObject(self, &kPresentAnimationTransitionInteractionPresentingControllerKey);
+    id <UIViewControllerInteractiveTransitioning>(^interactionPresentingControllerBlock)(id <UIViewControllerAnimatedTransitioning> animator) = objc_getAssociatedObject(self, &kPresentAnimationTransitionInteractionDissmissedControllerKey);
     if (interactionPresentingControllerBlock) {
         return interactionPresentingControllerBlock(animator);
     }
     return  nil;
 }
-- (void)interactionDismissedControllerBlock:(nullable id <UIViewControllerInteractiveTransitioning>(^)(id <UIViewControllerAnimatedTransitioning> animator))interactionDismissedControllerBlock {
-    objc_setAssociatedObject(self, &kPresentAnimationTransitionInteractionDissmissedControllerKey, interactionDismissedControllerBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
+
 - (nullable id <UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id <UIViewControllerAnimatedTransitioning>)animator {
-    id <UIViewControllerInteractiveTransitioning>(^interactionDismissedControllerBlock)(id <UIViewControllerAnimatedTransitioning> animator) = objc_getAssociatedObject(self, &kPresentAnimationTransitionInteractionDissmissedControllerKey);
+    id <UIViewControllerInteractiveTransitioning>(^interactionDismissedControllerBlock)(id <UIViewControllerAnimatedTransitioning> animator) = objc_getAssociatedObject(self, &kPresentAnimationTransitionInteractionPresentingControllerKey);
     if (interactionDismissedControllerBlock) {
         return interactionDismissedControllerBlock(animator);
     }

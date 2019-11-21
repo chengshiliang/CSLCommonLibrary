@@ -10,7 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSObject (PresentAnimation)
+@interface UIViewController (PresentAnimation)
+- (void)addPresentedController:(UIViewController *)presentedController;
 - (void)presentingControllerBlock:(nullable id <UIViewControllerAnimatedTransitioning>(^)(UIViewController *presentingController, UIViewController *sourceController))presentingControllerBlock;
 - (void)dismissedControllerBlock:(nullable id <UIViewControllerAnimatedTransitioning>(^)(UIViewController *dismissedController))dismissedControllerBlock;
 - (void)interactionPresentingControllerBlock:(nullable id <UIViewControllerInteractiveTransitioning>(^)(id <UIViewControllerAnimatedTransitioning> animator))interactionPresentingControllerBlock;
