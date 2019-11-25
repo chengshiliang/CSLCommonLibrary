@@ -1,5 +1,5 @@
 //
-//  NSObject+PresentAnimation.h
+//  NSObject+DelegateProxy.h
 //  CSLCommonLibrary
 //
 //  Created by SZDT00135 on 2019/11/21.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIViewController (PresentAnimation)
+@interface UIViewController (DelegateProxy)
 - (void)addPresentedController:(UIViewController *)presentedController;
 - (void)presentingControllerBlock:(nullable id <UIViewControllerAnimatedTransitioning>(^)(UIViewController *presentingController, UIViewController *sourceController))presentingControllerBlock;
 - (void)dismissedControllerBlock:(nullable id <UIViewControllerAnimatedTransitioning>(^)(UIViewController *dismissedController))dismissedControllerBlock;

@@ -1,5 +1,5 @@
 //
-//  NSObject+PresentAnimation.m
+//  NSObject+DelegateProxy.m
 //  CSLCommonLibrary
 //
 //  Created by SZDT00135 on 2019/11/21.
@@ -14,7 +14,7 @@ static void *kPresentAnimationTransitionDissmissControllerKey = "kPresentAnimati
 static void *kPresentAnimationTransitionInteractionPresentingControllerKey = "kPresentAnimationTransitionInteractionPresentingControllerKey";
 static void *kPresentAnimationTransitionInteractionDissmissedControllerKey = "kPresentAnimationTransitionInteractionDissmissedControllerKey";
 
-@implementation UIViewController (PresentAnimation)
+@implementation UIViewController (DelegateProxy)
 - (void)addPresentedController:(UIViewController *)presentedController {
     presentedController.transitioningDelegate = (id <UIViewControllerTransitioningDelegate>)[self delegateProxy];
 }
