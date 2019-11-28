@@ -34,7 +34,7 @@
                                                     userInfo:userInfo
                                                      repeats:repeat];
     __weak __typeof(timer)weakSelf = timer;
-    [self swizzDeallocMethod:aTarget callback:^(NSObject * _Nonnull __unsafe_unretained deallocObj) {
+    [self swizzMethod:aTarget action:Dealloc callback:^(NSObject *__unsafe_unretained  _Nonnull obj) {
         __strong __typeof(weakSelf)strongSelf = weakSelf;
         [strongSelf invalidate];
     }];

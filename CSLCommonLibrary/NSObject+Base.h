@@ -10,9 +10,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, SwizzActionType) {
+    Dealloc = 1,
+    WillAppear = 2,
+    DidAppear = 3,
+    WillDisappear = 4,
+    DidDisappear = 5
+};
+
 @interface NSObject (Base)
-- (void)swizzDeallocMethod:(NSObject *)target callback:(void(^)(__unsafe_unretained NSObject *deallocObj))callback;
-- (void)swizzDisappearMethod:(NSObject *)target callback:(void(^)(__unsafe_unretained NSObject *disappearObj))callback;
+- (void)swizzMethod:(NSObject *)target action:(SwizzActionType)type callback:(void(^)(__unsafe_unretained NSObject *obj))callback;
 - (void)addSelector:(SEL)selector fromProtocol:(_Nullable id)protocol callback:(void(^)(id))callback;
 @end
 

@@ -102,7 +102,7 @@
         count ++;
     }];
     
-    [self swizzDisappearMethod:self callback:^(NSObject *__unsafe_unretained  _Nonnull disappearObj) {
+    [self swizzMethod:self action:DidDisappear callback:^(NSObject *__unsafe_unretained  _Nonnull obj) {
         __strong typeof (weakSelf) strongSelf = weakSelf;
         if (strongSelf.delegate && [strongSelf.delegate respondsToSelector:@selector(doSomething::)]) {
            [strongSelf.delegate doSomething:true :@"hello"];

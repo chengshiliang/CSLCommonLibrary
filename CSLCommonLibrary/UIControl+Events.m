@@ -16,7 +16,7 @@ static void *kControl_Key = "kControl_Key";
     [self addTarget:self action:@selector(eventChange:) forControlEvents:event];
     [self setChangeBlock:changeBlock];
     __weak __typeof(self)weakSelf = self;
-    [self swizzDeallocMethod:target callback:^(NSObject * _Nonnull __unsafe_unretained deallocObj) {
+    [self swizzMethod:target action:Dealloc callback:^(NSObject *__unsafe_unretained  _Nonnull obj) {
         __strong __typeof(weakSelf)strongSelf = weakSelf;
         [strongSelf removeTarget:strongSelf action:@selector(eventChange:) forControlEvents:event];
     }];

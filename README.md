@@ -3,10 +3,8 @@
 
 ### NSObject+Base
 处理了`targe`的`dealloc`方法，方便这个库中其他的类对`kvo`,`notification`,`timer`的手动移除。
-`- (void)swizzDeallocMethod:(NSObject *)target callback:(void(^)(__unsafe_unretained NSObject *deallocObj))callback;`
-处理了`targe`的`viewWillDisappear:`方法，方便这个库中其他的类对`kvo`,`notification`,`timer`的手动移除。
-`- (void)swizzDisappearMethod:(NSObject *)target callback:(void(^)(__unsafe_unretained NSObject *disappearObj))callback;`
-当然调用者也可调用这两个方法，例如对`delegate`进行回调等。
+`- (void)swizzMethod:(NSObject *)target action:(SwizzActionType)type callback:(void(^)(__unsafe_unretained NSObject *deallocObj))callback;`
+处理了`targe`的`viewWillDisappear:`方法，方便这个库中其他的类对`kvo`,`notification`,`timer`的手动移除。当然调用者也可调用这两个方法，例如对`delegate`进行回调等。
 
 #### SLTimer
 继承`NSTimer`,内部自动处理`invalidate`方法。也自动防止循环引用问题，避免手动置`nil`的操作。当然调用者也可手动对SLTimer对象调用`invalidate`方法来停止计时器。
