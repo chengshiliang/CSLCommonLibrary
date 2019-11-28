@@ -28,6 +28,7 @@ static NSString * const SelectorAliasPrefix = @"csl_alias_";
 static NSString * const SubclassSuffix = @"_Selector";
 static void *SubclassAssociationKey = &SubclassAssociationKey;
 static void *ClassDeallocAssociationKey = &ClassDeallocAssociationKey;
+static void *ClassDidLoadAssociationKey = &ClassDidLoadAssociationKey;
 static void *ClassDidDisappearAssociationKey = &ClassDidDisappearAssociationKey;
 static void *ClassWillDisappearAssociationKey = &ClassWillDisappearAssociationKey;
 static void *ClassDidAppearAssociationKey = &ClassDidAppearAssociationKey;
@@ -259,28 +260,34 @@ static void NSObjectForSelector(NSObject *target, SEL selector, Protocol *protoc
                 methodName = @"dealloc";
             }
                 break;
+            case DidLoad:
+            {
+                associationKey = ClassDidLoadAssociationKey;
+                methodName = @"viewDidLoad";
+            }
+                break;
             case WillAppear:
             {
                 associationKey = ClassWillAppearAssociationKey;
-                methodName = @"willAppear";
+                methodName = @"viewWillAppear:";
             }
                 break;
             case DidAppear:
             {
                 associationKey = ClassDidAppearAssociationKey;
-                methodName = @"didAppear";
+                methodName = @"viewDidAppear:";
             }
                 break;
             case WillDisappear:
             {
                 associationKey = ClassWillDisappearAssociationKey;
-                methodName = @"willDisappear";
+                methodName = @"viewWillDisappear:";
             }
                 break;
             case DidDisappear:
             {
                 associationKey = ClassDidDisappearAssociationKey;
-                methodName = @"didDisappear";
+                methodName = @"viewDidDisappear:";
             }
                 break;
             default:
@@ -298,15 +305,14 @@ static void NSObjectForSelector(NSObject *target, SEL selector, Protocol *protoc
         SEL selector = sel_registerName([methodName UTF8String]);
         __block void (*originalFunction)(__unsafe_unretained id, SEL) = NULL;
         id newFunction = ^(__unsafe_unretained NSObject *obj) {
-            ;
-            NSMutableArray *realCallbackArray = objc_getAssociatedObject(obj, ClassDeallocAssociationKey);
+            NSMutableArray *realCallbackArray = objc_getAssociatedObject(obj, associationKey);
             if (realCallbackArray) {
                 for (void(^currentCallback)(__unsafe_unretained NSObject *obj) in realCallbackArray) {
                     if (currentCallback) {
                         currentCallback(obj);
                     }
                 }
-                objc_setAssociatedObject(obj, ClassDeallocAssociationKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+                objc_setAssociatedObject(obj, associationKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
             }
             if (originalFunction == NULL) {
                 struct objc_super superInfo = {

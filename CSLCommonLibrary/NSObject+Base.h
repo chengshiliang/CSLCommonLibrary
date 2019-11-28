@@ -12,10 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger, SwizzActionType) {
     Dealloc = 1,
-    WillAppear = 2,
-    DidAppear = 3,
-    WillDisappear = 4,
-    DidDisappear = 5
+    DidLoad = 2,
+    WillAppear = 3,
+    DidAppear = 4,
+    WillDisappear = 5,
+    DidDisappear = 6
 };
 
 @interface NSObject (Base)
