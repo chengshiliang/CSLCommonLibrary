@@ -33,6 +33,7 @@
                                                     selector:aSelector
                                                     userInfo:userInfo
                                                      repeats:repeat];
+    [[NSRunLoop currentRunLoop]addTimer:timer forMode:mode];
     __weak __typeof(timer)weakSelf = timer;
     [self swizzMethod:aTarget action:Dealloc callback:^(NSObject *__unsafe_unretained  _Nonnull obj) {
         __strong __typeof(weakSelf)strongSelf = weakSelf;
