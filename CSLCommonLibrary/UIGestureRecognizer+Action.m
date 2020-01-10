@@ -17,7 +17,7 @@ static void *kGesture_Key = "kGesture_Key";
     [self setClickBlock:clickBlock];
     __weak __typeof(self)weakSelf = self;
     [self swizzMethod:target action:Dealloc callback:^(NSObject *__unsafe_unretained  _Nonnull obj) {
-        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        __strong __typeof(self)strongSelf = weakSelf;
         [strongSelf removeTarget:strongSelf action:@selector(onClick:)];
     }];
 }

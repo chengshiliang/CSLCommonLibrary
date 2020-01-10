@@ -27,7 +27,7 @@
         [self.target addObserver:[KVOProxy share] forKeyPath:self.keyPath options:options context:NULL];
         __weak __typeof(self)weakSelf = self;
         [self swizzMethod:target action:Dealloc callback:^(NSObject *__unsafe_unretained  _Nonnull obj) {
-            __strong __typeof(weakSelf)strongSelf = weakSelf;
+            __strong __typeof(self)strongSelf = weakSelf;
             NSString *keyPath = strongSelf.keyPath;
             @synchronized (strongSelf) {
                 strongSelf.block = nil;

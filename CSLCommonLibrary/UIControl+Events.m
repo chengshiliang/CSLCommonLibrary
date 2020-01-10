@@ -39,7 +39,7 @@ static void *kControl_LastEventTimeKey = "kControl_LastEventTimeKey";
     [self setChangeBlock:changeBlock];
     __weak __typeof(self)weakSelf = self;
     [self swizzMethod:target action:Dealloc callback:^(NSObject *__unsafe_unretained  _Nonnull obj) {
-        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        __strong __typeof(self)strongSelf = weakSelf;
         [strongSelf removeTarget:strongSelf action:@selector(eventChange:) forControlEvents:event];
     }];
 }

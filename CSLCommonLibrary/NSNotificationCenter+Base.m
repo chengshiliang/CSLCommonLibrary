@@ -29,7 +29,7 @@ static void *kNotification_Observer_Key = "kNotification_Observer_Key";
     }
     __weak __typeof(self)weakSelf = self;
     [self swizzMethod:target action:Dealloc callback:^(NSObject *__unsafe_unretained  _Nonnull obj) {
-        __strong __typeof(weakSelf)strongSelf = weakSelf;
+        __strong __typeof(self)strongSelf = weakSelf;
         id <NSObject> observer = strongSelf.observers[obj.description];
         if (observer) {
             [strongSelf removeObserver:observer];
