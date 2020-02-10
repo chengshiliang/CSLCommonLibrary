@@ -8,7 +8,6 @@
 #ifndef SLCommonLibrary_h
 #define SLCommonLibrary_h
 #import <CSLCommonLibrary/SLUIConsts.h>
-#import <CSLCommonLibrary/SLUIConst.h>
 
 #import <CSLCommonLibrary/NSString+Util.h>
 #import <CSLCommonLibrary/UITextView+Util.h>
