@@ -1,5 +1,5 @@
 PODS:
-  - CSLCommonLibrary (0.3.6):
+  - CSLCommonLibrary (0.3.7):
     - SDWebImage
   - SDWebImage (5.5.2):
     - SDWebImage/Core (= 5.5.2)
@@ -17,7 +17,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CSLCommonLibrary: 0d4fe78a4e0663672e7e2fbcd4242ef0d6a15780
+  CSLCommonLibrary: fafcb13e4600bf1f01e0502a8c22e7e67af4d632
   SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
 
 PODFILE CHECKSUM: 318095f2a7cad110021756814123ada1dc32fc38

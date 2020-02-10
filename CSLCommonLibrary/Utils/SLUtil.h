@@ -6,13 +6,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CSLCommonLibrary/SLUIConst.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SLUtil : NSObject
-+ (UIFont *)fontSize:(LabelType)type;
-+ (UIColor *)color:(LabelType)type;
 + (BOOL)bangsScreen;
 + (void)runInMain:(void(^)(void))block;
 + (void)runBackground:(void(^)(void))block;
