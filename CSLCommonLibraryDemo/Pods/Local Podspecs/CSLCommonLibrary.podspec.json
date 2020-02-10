@@ -1,6 +1,6 @@
 {
   "name": "CSLCommonLibrary",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "summary": "supply basic function,package basic library,like kvo,notify.",
   "homepage": "https://github.com/chengshiliang/CSLCommonLibrary",
   "license": {
@@ -12,15 +12,20 @@
   },
   "source": {
     "git": "https://github.com/chengshiliang/CSLCommonLibrary.git",
-    "tag": "0.3.5"
+    "tag": "0.3.6"
   },
   "platforms": {
     "ios": "7.0"
   },
-  "source_files": "CSLCommonLibrary/*.{h,m}",
+  "source_files": "CSLCommonLibrary/**/*.{h,m}",
   "requires_arc": true,
   "frameworks": [
     "Foundation",
     "UIKit"
-  ]
+  ],
+  "dependencies": {
+    "SDWebImage": [
+
+    ]
+  }
 }
