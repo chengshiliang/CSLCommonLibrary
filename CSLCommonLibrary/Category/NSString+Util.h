@@ -5,11 +5,13 @@
 //  Created by SZDT00135 on 2019/11/5.
 //
 
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
+@interface NSString (Util)
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSString (Util)
 + (BOOL)emptyString:(NSString *)str;
 + (NSString *)blankString:(NSString *)str;
 - (CGSize)sizeWithFont:(UIFont*)font size:(CGSize)size;
