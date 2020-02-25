@@ -41,14 +41,17 @@ static void *kGestureRecognizerShouldReceiveTouchKey = "kGestureRecognizerShould
     }
 }
 
-- (void)gestureRecognizerShouldBeginBlock:(BOOL(^)(UIGestureRecognizer *gesture))gestureRecognizerShouldBeginBlock {
-    objc_setAssociatedObject(self, kGestureRecognizerShouldBeginKey, gestureRecognizerShouldBeginBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)gestureRecognizerShouldBeginBlock:(BOOL(^)(UIGestureRecognizer *gesture))gestureRecognizerShouldBegin {
+    [self delegateProxy];
+    objc_setAssociatedObject(self, kGestureRecognizerShouldBeginKey, gestureRecognizerShouldBegin, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
-- (void)shouldRequireFailureOfGestureRecognizerBlock:(BOOL(^)(UIGestureRecognizer *gestureRecognizer,UIGestureRecognizer *otherGestureRecognizer))shouldRequireFailureOfGestureRecognizerBlock {
-    objc_setAssociatedObject(self, kShouldRequireFailureOfGestureRecognizerBlockKey, shouldRequireFailureOfGestureRecognizerBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)shouldRequireFailureOfGestureRecognizerBlock:(BOOL(^)(UIGestureRecognizer *gestureRecognizer,UIGestureRecognizer *otherGestureRecognizer))shouldRequireFailureOfGestureRecognizer {
+    [self delegateProxy];
+    objc_setAssociatedObject(self, kShouldRequireFailureOfGestureRecognizerBlockKey, shouldRequireFailureOfGestureRecognizer, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
-- (void)gestureRecognizerShouldReceiveTouchBlock:(BOOL(^)(UIGestureRecognizer *gestureRecognizer,UITouch *touch))gestureRecognizerShouldReceiveTouchBlock {
-    objc_setAssociatedObject(self, kGestureRecognizerShouldReceiveTouchKey, gestureRecognizerShouldReceiveTouchBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+- (void)gestureRecognizerShouldReceiveTouchBlock:(BOOL(^)(UIGestureRecognizer *gestureRecognizer,UITouch *touch))gestureRecognizerShouldReceiveTouch {
+    [self delegateProxy];
+    objc_setAssociatedObject(self, kGestureRecognizerShouldReceiveTouchKey, gestureRecognizerShouldReceiveTouch, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
