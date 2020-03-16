@@ -30,6 +30,29 @@ NS_ASSUME_NONNULL_BEGIN
  复制view
  */
 + (UIView *)duplicateComponent:(UIView *)view;
+/**
+DeviceInfo：获取当前设备的 用户自定义的别名，例如：库克的 iPhone 9
+
+@return 当前设备的 用户自定义的别名，例如：库克的 iPhone 9
+*/
++ (NSString *)iphoneName;
+
+/**
+ DeviceInfo：获取当前设备的 系统名称，例如：iOS 13.1
+ 
+ @return 当前设备的 系统名称，例如：iOS 13.1
+ */
++ (NSString *)iphoneSystemVersion;
+
++ (NSString *)bundleIdentifier;
+
++ (NSString *)bundleVersion;
+
++ (NSString *)bundleShortVersionString;
+
++ (NSString *)iphoneType;
+
++ (BOOL)isIPhoneXSeries;
 @end
 
 NS_ASSUME_NONNULL_END

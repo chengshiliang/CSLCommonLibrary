@@ -16,7 +16,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [[SLStand sharedInstance] startMonitor];
+    [SLStand sharedInstance].callbackWhenStandStill = ^{
+        NSLog(@"eagle.检测到卡顿了");
+    };
     return YES;
 }
 

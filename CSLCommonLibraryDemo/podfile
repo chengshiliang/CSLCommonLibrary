@@ -2,6 +2,7 @@ source 'https://github.com/Cocoapods/Specs.git'
 platform :ios, '8.0'
 target 'CSLCommonLibraryDemo' do
 pod 'SDWebImage', '~> 5.0'
+pod 'SSZipArchive'
 pod 'CSLCommonLibrary', :path => '../'
 end
 inhibit_all_warnings!

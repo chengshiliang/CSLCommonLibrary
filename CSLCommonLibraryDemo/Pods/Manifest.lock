@@ -1,26 +1,31 @@
 PODS:
-  - CSLCommonLibrary (0.4.0):
+  - CSLCommonLibrary (0.4.1):
     - SDWebImage
+    - SSZipArchive
   - SDWebImage (5.5.2):
     - SDWebImage/Core (= 5.5.2)
   - SDWebImage/Core (5.5.2)
+  - SSZipArchive (2.2.2)
 
 DEPENDENCIES:
   - CSLCommonLibrary (from `../`)
   - SDWebImage (~> 5.0)
+  - SSZipArchive
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - SDWebImage
+    - SSZipArchive
 
 EXTERNAL SOURCES:
   CSLCommonLibrary:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CSLCommonLibrary: 5f076723d4594e6cb596263701314d9d005b896f
+  CSLCommonLibrary: d036903830143e9a6aaeccf0e6ff8bd7ed5266c3
   SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
+  SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
 
-PODFILE CHECKSUM: fc6d9b4f4e6ab15eb1be58e90abdb75ebe036b8a
+PODFILE CHECKSUM: d3239bd597e392123a973e312a4be106eee14b25
 
 COCOAPODS: 1.8.4

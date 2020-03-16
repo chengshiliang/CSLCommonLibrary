@@ -110,6 +110,10 @@
     }];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    usleep(10 * 1000 * 1000); // 1秒
+}
+
 - (void)dealloc {
     NSLog(@"second vc dealloc");
 }
